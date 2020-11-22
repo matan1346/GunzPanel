@@ -4,11 +4,11 @@
 ![Image](./NewPanel.jpg)
 ## Home Page
 ![Image](./NewPanel2.jpg)
-## Change Permissions
+## Change Permissions of regular users
 ![Image](./NewPanel3.jpg)
-## Login
+## Change Permissions - Hebrew Mode
 ![Image](./NewPanel4.jpg)
-## Login
+## Set Administrator Permissoons - Actions available
 ![Image](./NewPanel5.jpg)
 ## Login
 ![Image](./NewPanel6.jpg)
