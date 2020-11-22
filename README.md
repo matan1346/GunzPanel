@@ -14,9 +14,9 @@
 ![Image](./NewPanel6.jpg)
 ## Set System View Translate
 ![Image](./NewPanel7.jpg)
-## Login
+## Additional Permissions - English Mode
 ![Image](./NewPanel8.jpg)
-## Login
+## Searching Account Details
 ![Image](./NewPanel9.jpg)
-## Login
+## Account Details
 ![Image](./NewPanel10.jpg)
