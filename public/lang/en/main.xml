@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lang>
+    <langspec>
+        <str name="DIRECTION">ltr</str>
+        <str name="TEXT_ALIGN">left</str>
+        <str name="FLOAT">FL_LEFT</str>
+        <str name="FLOAT_REV">FL_RIGHT</str>
+        <str name="MENU_ARROW_FLOAT">MENU_ARROW_LEFT</str>
+        
+        <str name="LANG_MENU">Language</str>
+    </langspec>
+
+    <main>
+         <str name="PLEASE">Please</str>
+         <str name="HELLO">Hello</str>
+         <str name="SIGN_IN">Sign In</str>
+         <str name="SIGN_OUT">Sign Out</str>
+         <str name="LOADING">Loading...</str>
+    </main>
+    
+    <module> <!-- str name -> module name -->
+        <desc>
+            <str name="login">Gunz Login Panel</str>
+        </desc>
+        
+        <keywords>
+            <str name="login">Login, Gunz Login, Gunz Panel Login</str>
+        </keywords>
+    </module>
+    
+    <autocomplete>
+        <str name="AUTO_COMPLETE">Auto Complete...</str>
+    </autocomplete>
+    
+    <error>
+        <str name="STR_NOT_FOUND">String Not Found</str>
+        <str name="MISSING_FORM_FIELDS">Missing Form Fields</str>
+        <str name="AUTH_FAILED">Authentication Failed</str>
+        <str name="ERROR">Error</str>
+        <str name="NOT_LOGGED_IN">Not Logged In</str>
+        <str name="BAD_REQUEST">Bad Request</str>
+        
+        <database>
+            <str name="CONNECT">Can't connect to db</str>
+            <str name="QUERY_EXECUTION">Query execution failed</str>
+        </database>
+    </error>
+    
+</lang>

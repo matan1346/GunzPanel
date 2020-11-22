@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionslogs>
+        
+    <account>
+        <str name="CHANGE_USERID">שם החשבון {{ UserID1 }} שונה לשם {{ UserID2 }}.</str>
+        <str name="CHANGE_PASS">הסיסמה של החשבון {{ UserID }} שונתה ל-{{ Pass }}.</str>
+        <str name="CHANGE_GRADE">התפקיד של החשבון {{ UserID }} שונה ל{{ Grade }}.{{ newline }}משך זמן: {{ Time }}.</str>
+        <str name="BAN_USER">החשבון {{ UserID }} נחסם.{{ newline }}משך זמן: {{ Time }}.</str>
+        <str name="UNBAN_USER">החשבון {{ UserID }} שוחרר מהחסימה.</str>
+    </account>
+    
+    <character>
+        <str name="CHANGE_VALUE">ה{{ Value_Name }} של הדמות {{ Character }} שונה ל-{{ Value }}.</str>
+        <str name="CHANGE_LEVEL">הרמה של הדמות {{ Character }} הוגדרה ל-{{ Level }}.</str>
+        <str name="SET_COLOR">הצבע {{ Color }} הוגדר לדמות {{ Character }}.{{ newline }}משך זמן: {{ Time }}.</str>
+    </character>
+    
+    <clan>
+    
+    </clan>
+    
+</actionslogs>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form_errors>
+
+    <regex>
+        <str name="REGEX_LIMITEDTEXT">ה{{ key }} יכול להכיל רק מספרים, אותיות באנגלית וקווים תחתוניים.</str>
+        <str name="REGEX_NUMBER">ה{{ key }} יכול להכיל רק מספרים.</str>
+        <str name="REGEX_EMAIL">ה{{ key }} יכול להכיל רק מספרים, אותיות באנגלית, קווים תחתוניים, נקודות ושטרודל. תבנית: myemail@example.com</str>
+        <str name="REGEX_PLAYERNAME">ה{{ key }} יכול להכיל רק מספרים, אותיות באנגלית, קויים תחתוניים וסוגריים מרובעים.</str>
+    </regex>
+    
+    <form_system_messages>
+        <str name="SYSTEM_MSG">מערכת</str>
+        <str name="DATA_MSG">מסד נתונים</str>
+        <str name="VALID_MSG">אימות</str>
+    </form_system_messages>
+    
+    
+    <str name="EMPTY">ה{{ key }} ריק.</str>
+    <str name="NOT_SAME">ה{{ key2 }} לא שווה כמו {{ key1 }}.</str>
+    <str name="NOT_NUMBER">ה{{ key }} הוא לא מספר.</str>
+    <str name="NOT_BETWEEN">ה{{ key }} הוא לא בטווח {{ min }}-{{ max }} תווים.</str>
+    <str name="MIN">ה{{ key }} חייב להיות לפחות בעל {{ min }} תווים.</str>
+    <str name="MAX">ה{{ key }} לא יכול לעבור אורך {{ max }} תווים.</str>
+    <str name="EXISTS">ה{{ key }} {{ keyvalue}} כבר קיים.</str>
+    <str name="SEARCH_DOES_NOT_EXIST">המידע שנשלח אינו קיים במערכת.</str>
+    <str name="SEARCH_DOES_NOT_EXIST2">ה{{ key }} {{ keyvalue }} לא קיים.</str>
+    
+    <str name="WRONG_INFO">המידע שסופק שגוי</str>
+    <str name="NOT_FOUND">המערכת לא מצאה את השדות {{ keys }}, בבקשה נסו מאוחר יותר.</str>
+    <str name="INACTIVE">אין לך את ההרשאות לשימוש בפעולה זו או הפעולה אינה פעילה.</str>
+    <str name="NO_ACTION_SCRIPT">המערכת לא מצאה את הפעולה {{ action }} במחלקה של ה{{ category }}.</str>
+    <str name="CATEGORY_ACTION_DOES_NOT_EXIST">הקטגוריה ו / או הפעולה לא קיימות בכלל.</str>
+</form_errors>

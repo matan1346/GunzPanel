@@ -1,0 +1,284 @@
+{% include 'layout/header.html' %}
+{% import "layout/forms/inputs.html" as inputs %}
+
+<script type="text/javascript">
+    
+    SELECTION_OPTIONS = '{{SELECTION_OPTIONS|json_encode|raw}}';
+    
+</script>
+
+<div id="Selection-View-Container">
+    <table id="Selection-Table">
+        <thead>
+            <th>PFSID</th>
+            <th>Selection SYSTEM Name</th>
+            <th>Selection Display Name</th>
+            <th>Options List</th>
+        </thead>
+        
+        <tbody>
+        {% for SelectionID, SelectionItem in SELECTION_LIST  %}
+            <tr class="Selection-Table-Raw" data-id="{{SelectionItem['PFSID']}}">
+                <td>{{SelectionItem['PFSID']}}</td>
+                <td><input type="text" size="25" placeholder="Selection System Name" value="{{SelectionItem['SelectionName']}}" autocomplete="off" /></td>
+                <td><input type="text" size="25" placeholder="Selection Display Name" value="{{SelectionItem['SelectionName']}}_Name" autocomplete="off" /></td>
+                <td>
+                    
+                    <!--<select class="Select-Options-Pick">
+                        {{ inputs.select_options(SelectionItem['SelectionName']) }}
+                    </select>/-->
+                    <div class="Slider-Options-Button">{{LANG.ACTIONS_OPEN}}</div>
+                    <!--<div>{{dump(SelectionItem['Options'][0])}}</div>/-->
+                    
+                    
+                    
+                </td>
+            </tr>
+            <tr class="Option-Table-Raw">
+            <td colspan="4">
+                <div class="Option-Table-Holder" data-id="{{SelectionItem['PFSID']}}">
+                    {% if SelectionItem['Options'] is not empty %}
+                        <table class="Selection-Option-Table">
+                            <thead>
+                                <tr>
+                                    <th>PFSSID</th>
+                                    <th>OptionName</th>
+                                    <th>OptionTranslate</th>
+                                    <th>Group</th>
+                                    <th>Value</th>
+                                    <th>Active</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    {% for OptionID, OptionItem in SelectionItem['Options']  %}
+                                <tr data-translation-id="{{OptionItem['PFOID']}}">
+                                    <td>{{OptionItem['PFOID']}}</td>
+                                    <td>{{SELECTION_OPTIONS[OptionItem['PFOID']]['OptionPath']}}<!--<input type="text" size="25" placeholder="OptionName" value="{{SELECTION_OPTIONS[OptionItem['PFOID']]['OptionPath']}}" autocomplete="off"/>!--></td>
+                                    <td><button class="Tranlate-Button-OPEN">Translate</button></td>
+                                    <td><input type="text" size="25" placeholder="Group" value="{{OptionItem['GroupName']}}" autocomplete="off"/></td>
+                                    <td><input type="text" size="5" placeholder="OptionValue" value="{{OptionItem['OptionValue']}}" autocomplete="off"/></td>
+                                    <td>
+                                    {% if OptionItem['Active'] != true %}
+                                    {% set not_active_status = 'selected' %}
+                                    {% else %}
+                                    {% set not_active_status = '' %}
+                                    {% endif %}
+                                        <select class="original_select" style="width: 50px">
+                                            <option>Yes</option>
+                                            <option {{not_active_status}}>No</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            
+                        <!--<tr>
+                            <td>{{SELECTION_OPTIONS[OptionItem['PFOID']]['OptionPath']}}</td>
+                        </tr>/-->
+                        <tr>
+                            <td colspan="6">
+                                <div class="Translation-Box-Container box-shadow" data-translation-id="{{OptionItem['PFOID']}}">
+                                    <h1>Translation Box</h1>
+                                    <table class="Search-Result-Table Translate-Box-Table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Country</th>
+                                                <th>Language</th>
+                                                <th>Text</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                    <div class="Translation-Box-Buttons">
+                                        <div class="Translation-Box-Button-Item Translation-Reset">{{Actions['RESET_FORM']}}</div>
+                                        <div class="Translation-Box-Button-Item Translation-Submit">{{Actions['UPDATE_FORM']}}</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                            </tbody>
+                        </table>
+                        <!--<table class="Tranlation-List-Table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Language</th>
+                                    <th>text</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>עברית</td>
+                                    <td>רגיל</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>English</td>
+                                    <td>Normal</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>/-->
+                    {% else %}
+                    No Data
+                    {% endif %}
+                </div>
+            </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        
+        
+    </table>
+    <!--
+    <div class="Holder-Selection-Editor box-shadow" style="display: none;">
+        <table class="Selection-Option-Table">
+            <thead>
+                <tr>
+                    <th>PFSSID</th>
+                    <th>OptionName</th>
+                    <th>OptionTranslate</th>
+                    <th>Group</th>
+                    <th>Value</th>
+                    <th>Active</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" size="25" placeholder="OptionName" value="NORMAL" autocomplete="off"/></td>
+                    <td><button class="Tranlate-Button-OPEN">Translate</button></td>
+                    <td><input type="text" size="25" placeholder="Group" value="0" autocomplete="off"/></td>
+                    <td><input type="text" size="5" placeholder="OptionValue" value="1" autocomplete="off"/></td>
+                    <td>
+                        <select class="original_select" style="width: 50px">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="text" size="25" placeholder="OptionName" value="POLICE" autocomplete="off"/></td>
+                    <td><button class="Tranlate-Button-OPEN">Translate</button></td>
+                    <td><input type="text" size="25" placeholder="Group" value="0" autocomplete="off"/></td>
+                    <td><input type="text" size="5" placeholder="OptionValue" value="2" autocomplete="off"/></td>
+                    <td>
+                        <select class="original_select" style="width: 50px">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><input type="text" size="25" placeholder="OptionName" value="Game Master" autocomplete="off"/></td>
+                    <td>
+                        <button class="Tranlate-Button-OPEN">Translate</button>
+                        
+                    </td>
+                    <td><input type="text" size="25" placeholder="Group" value="FTRESS" autocomplete="off"/></td>
+                    <td><input type="text" size="5" placeholder="OptionValue" value="3" autocomplete="off"/></td>
+                    <td>
+                        <select class="original_select" style="width: 50px">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="Translation-Box-Container box-shadow">
+                        <h1>Translation - <span>GameMaster</span></h1>
+                        <table class="Search-Result-Table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Language</th>
+                                    <th>Text</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>English</td>
+                                    <td><input type="text" value="Game Master" placeholder="Translated Text" autocomplete="off" /></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Hebrew</td>
+                                    <td>Game master</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="Translation-Box-Buttons">
+                            <div class="Translation-Box-Button-Item Translation-Cancel">Cancel</div>
+                            <div class="Translation-Box-Button-Item Translation-Submit">Submit</div>
+                        </div>
+                    </div>
+                    /-->
+</div>
+{% include 'layout/footer.html' %}

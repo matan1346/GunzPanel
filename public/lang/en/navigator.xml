@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigator>
+    
+    <str name="HOME">Home</str>
+    <home>
+        <str name="LOGS">Logs</str>
+    </home>
+    
+    <str name="ACCOUNT">Account</str>
+    <account>
+        <str name="CHANGE_USERID">Change UserID</str>
+        <str name="CHANGE_PASSWORD">Change Password</str>
+        <str name="CHANGE_UGRADEID">Change UGradeID</str>
+        <str name="SEARCH">Search Account</str>
+    </account>
+    
+    <str name="CHARACTER">Character</str>
+    <character>
+        <str name="CHANGE_NICKNAME">Change Nickname</str>
+        <str name="CHANGE_PASSWORD">Change Password</str>
+        <str name="SEARCH">Search Character</str>
+    </character>
+    
+    
+    <str name="CLAN">Clan</str>
+    <clan>
+        <str name="CHANGE_NAME">Change Name</str>
+        <str name="CHANGE_SCORE">Change Score</str>
+        <str name="CHANGE_ROLE">Change Role</str>
+        <str name="SEARCH">Search Clan</str>
+    </clan>
+    
+    
+    <str name="PANEL_ROLES">Panel Roles</str>
+    
+    <str name="SELECT_VIEW">Select View</str>
+    
+    <str name="SHOP_LOGS">Shop Logs</str>
+    
+    <str name="EVENTS">Events</str>
+    
+    <str name="RULES">Rules</str>
+    
+    <str name="CHAT">Chat</str>
+    
+    <str name="TEST1">Test1</str>
+    
+    <str name="TEST2">Test2</str>
+    
+</navigator>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+    <str name="ACTIONS_MENU_TITLE">Actions Menu</str>
+    <str name="NO_PERMISSIONS">No Permissions</str>
+    
+    <buttons>
+        <str name="ACTIONS_OPEN">Open</str>
+        <str name="ACTIONS_CLOSE">Close</str>
+    </buttons>
+    
+    <form>
+    
+        <default>
+            <str name="FORM_FIELD">Form Field</str>
+        </default>
+    
+        <global>
+            
+            <str name="DURATION">Duration</str>
+            <str name="DURATION_INPUT">Time Value...</str>
+            
+        </global>
+    
+    
+        <account>
+            
+            <global>
+                <str name="USER_INPUT">User Info...</str>
+                <str name="NEW_USER_TEXT">Value</str>
+                <str name="NEW_USER_INPUT">New Value...</str>
+                
+                <str name="SELECT_DATA">Select according user data</str>
+            </global>
+            
+            <change_userid>
+                <str name="NEW_USER_TEXT">UserID</str>
+                <str name="NEW_USER_INPUT">New UserID...</str>
+            </change_userid>
+            
+            <change_password>
+            
+                <str name="NEW_USER_TEXT">Password</str>
+                <str name="NEW_USER_INPUT">New Password...</str>
+            
+            </change_password>
+            
+            <change_ugradeid>
+            
+                <str name="NEW_USER_TEXT">Grade</str>
+            
+            </change_ugradeid>
+            
+        </account>
+        
+        <character>
+        
+            <global>
+            
+                <str name="CHARACTER_INPUT">Character Info...</str>
+            
+            </global>
+        
+            <change_nickname>
+                
+                <str name="NEW_CHARACTER_TEXT">Nickname</str>
+                <str name="NEW_CHARACTER_INPUT">New Nickname...</str>
+                
+            </change_nickname>
+        
+        </character>
+        
+        <clan>
+        
+            <global>
+            
+                <str name="CLAN_INPUT">Clan Info...</str>
+            
+            </global>
+        
+            <change_name>
+                
+                <str name="NEW_CLAN_TEXT">Clan</str>
+                <str name="NEW_CLAN_INPUT">New Name...</str>
+                
+            </change_name>
+            
+            <change_score>
+            
+                <str name="NEW_CLAN_INPUT">Value...</str>
+                
+            </change_score>
+            
+            <change_role>
+            
+                <str name="NEW_CLAN_TEXT">Role</str>
+            
+            </change_role>
+        
+        </clan>
+        
+        <reason>
+            <str name="ENTER_REASON">Enter Reason</str>
+            <str name="REASON">Reason</str>
+        </reason>
+        
+        <login>
+            <str name="LOGIN_PANEL_TITLE">Login Panel</str>
+            <str name="USER">User</str>
+            <str name="PASSWORD">Password</str>
+            <str name="PANEL_CODE">Panel Code</str>
+            <str name="WRONG_INFO">Wrong Login Info</str>
+            <str name="LOGGED_IN">Logged In Successfuly</str>
+            <inputs>
+                <str name="USER">Your User Identity...</str>
+                <str name="PASSWORD">Your User Password...</str>
+                <str name="PANEL_CODE">Code</str>
+            </inputs>
+        </login>
+        
+        <logout>
+            <str name="LOGGED_OUT">Logged Out Successfuly</str>
+        </logout>
+        
+        
+        <str name="DISPLAY_RESULTS">Display Results</str>
+        <str name="HIDE_RESULTS">Hide Results</str>
+        <str name="N_DATA">No data to show</str>
+        <str name="RESULT">Result</str>
+        
+        <str name="SEND">Send</str>
+        <str name="UPDATE">Update</str>
+        <str name="CANCLE">Cancle</str>
+        <str name="RESET">Reset</str>
+        <str name="LOGIN">Sign in</str>
+        
+    </form>
+    
+    <settings>
+        <str name="CATEGORY_ROLES">Category Roles</str>
+        <str name="ACTIONS_ROLES">Actions Roles</str>
+        
+        <str name="CATEGORY_NAME">Category Name</str>
+        <str name="ACTION_NAME">Action Name</str>
+        <str name="ALL_ACTIONS">All Actions</str>
+        
+        <str name="INPUT_EXISTS">Exists</str>
+        <str name="INPUT_ACTIVE">Active</str>
+        <str name="INPUT_DISPLAY">Display</str>
+    </settings>
+</actions>

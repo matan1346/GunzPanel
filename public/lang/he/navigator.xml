@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigator>
+    
+    <str name="HOME">בית</str>
+    <home>
+        <str name="LOGS">רישומים</str>
+    </home>
+    
+    <str name="ACCOUNT">חשבון</str>
+    <account>
+        <str name="CHANGE_USERID">שינוי שם משתמש</str>
+        <str name="CHANGE_PASSWORD">שינוי סיסמה</str>
+        <str name="CHANGE_UGRADEID">שינוי דרגה</str>
+        <str name="SEARCH">חיפוש חשבון</str>
+    </account>
+    
+    <str name="CHARACTER">דמות</str>
+    <character>
+        <str name="CHANGE_NICKNAME">שינוי כינוי</str>
+        <str name="SEARCH">חיפוש דמות</str>
+    </character>
+    
+    
+    <str name="CLAN">שבט</str>
+    <clan>
+        <str name="CHANGE_NAME">שינוי שם</str>
+        <str name="CHANGE_SCORE">שינוי נקודות</str>
+        <str name="CHANGE_ROLE">שינוי תפקיד</str>
+        <str name="SEARCH">חיפוש שבט</str>
+    </clan>
+    
+    
+    <str name="PANEL_ROLES">הגדרות פאנל</str>
+    
+    <str name="SELECT_VIEW">תצוגת בחירה</str>
+    
+    <str name="SHOP_LOGS">רישומי חנות</str>
+    
+    <str name="EVENTS">אירועים</str>
+    
+    <str name="RULES">חוקים</str>
+    
+    <str name="CHAT">שיחה</str>
+    
+    <str name="TEST1">ניסיון1</str>
+    
+    <str name="TEST2">ניסיון2</str>
+    
+</navigator>

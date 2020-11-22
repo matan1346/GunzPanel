@@ -1,0 +1,41 @@
+RewriteEngine On
+
+Options -Indexes
+
+RewriteBase /PHP%20Projects/GunzPanel/
+RewriteCond %{REQUEST_FILE} !-d
+RewriteCond $(REQUEST_FILE) !-f
+RewriteCond %{QUERY_STRING} ^(.*)$
+#RewriteRule ^ajax/([a-zA-Z0-9\_\^]+)$ public/ajax/ajax_$1.php [L,R]
+RewriteRule ^([a-zA-Z0-9\_\^]+)$ index.php?page=$1&%1 [L]
+RewriteRule ^([a-zA-Z0-9\_\^]+)/([a-zA-Z0-9\[\]\_\^]+)$ index.php?page=$1&name=$2 [L]
+RewriteRule ^([a-zA-Z0-9\_\^]+)/([a-zA-Z0-9\[\]\_\^]+)/([a-zA-Z0-9\[\]\_\^]+)$ index.php?page=$1&name=$2&page_num=$3
+
+# request is for a directory
+RewriteCond %{REQUEST_FILENAME} -d
+# there is no index.html inside requested directory
+RewriteCond %{REQUEST_FILENAME}/index.php !-f
+# redirect to /404.php
+RewriteRule ^ /PHP%20Projects/GunzPanel/404.php [L,R]
+
+
+#<IfModule mod_rewrite.c>
+#    RewriteCond %{HTTP_HOST} ^([^.]+)\.localhost$
+#    RewriteRule ^(.*)$ "http://localhost/$1?var=%1" [P]
+
+#    RewriteCond %{HTTP_HOST} ^(www\.)?(en|he)\.localhost$
+    # Create an environment variable to remember the language:
+#    RewriteRule (.*) - [QSA,E=LANGUAGE:%2]
+    # Now check if the LANGUAGE is empty (= doesn't exist)
+#    RewriteCond %{ENV:LANGUAGE} ^$
+    # If so, create the default language (=es):
+#    RewriteRule (.*) - [QSA,E=LANGUAGE:es]
+    # Add the language to the URI (without modifying it):
+#    RewriteCond (.*) $1?lang={ENV:LANGUAGE} [QSA]
+
+#</IfModule>
+
+<Files  ~ "\.(html|txt|rar)$">
+  Order allow,deny
+  Deny from all
+</Files>

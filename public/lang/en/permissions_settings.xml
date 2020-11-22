@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions_settings>
+
+    <str name="PERMISSION">Permission</str>
+    <str name="SELECTIONS">Selections</str>
+    
+    <str name="SELECT_PER_FIRST">Select Permission First</str>
+    <str name="SELECT_ADD">Add</str>
+    <str name="ACTIONS">Actions</str>
+    <str name="SAVE_ACTIONS">Save Actions</str>
+    <str name="SAVE_SELECTIONS">Save Selections</str>
+
+</permissions_settings>

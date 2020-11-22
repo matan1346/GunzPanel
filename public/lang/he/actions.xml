@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+    <str name="ACTIONS_MENU_TITLE">תפריט פעולות</str>
+    <str name="NO_PERMISSIONS">אין הרשאות</str>
+    
+    <buttons>
+        <str name="ACTIONS_OPEN">פתח</str>
+        <str name="ACTIONS_CLOSE">סגור</str>
+    </buttons>
+    
+    <form>
+    
+        <global>
+            
+            <str name="DURATION">משך זמן</str>
+            <str name="DURATION_INPUT">ערך זמן...</str>
+            
+        </global>
+    
+    
+        <account>
+            
+            <global>
+                <str name="USER_INPUT">מידע משתמש...</str>
+                <str name="NEW_USER_TEXT">ערך</str>
+                <str name="NEW_USER_INPUT">ערך חדש...</str>
+                
+                <str name="SELECT_DATA">בחירה ע"פ נתוני המשתמש</str>
+            </global>
+            
+            <change_userid>
+                <str name="NEW_USER_TEXT">שם משתמש</str>
+                <str name="NEW_USER_INPUT">שם משתמש חדש...</str>
+            </change_userid>
+            
+            <change_password>
+            
+                <str name="NEW_USER_TEXT">סיסמה</str>
+                <str name="NEW_USER_INPUT">סיסמה חדשה...</str>
+            
+            </change_password>
+            
+            <change_ugradeid>
+            
+                <str name="NEW_USER_TEXT">דרגה</str>
+            
+            </change_ugradeid>
+            
+        </account>
+        
+        <character>
+        
+            <global>
+            
+                <str name="CHARACTER_INPUT">מידע דמות...</str>
+            
+            </global>
+        
+            <change_nickname>
+                
+                <str name="NEW_CHARACTER_TEXT">כינוי</str>
+                <str name="NEW_CHARACTER_INPUT">כינוי חדש...</str>
+                
+            </change_nickname>
+        
+        </character>
+        
+        <clan>
+        
+            <global>
+            
+                <str name="CLAN_INPUT">מידע שבט...</str>
+            
+            </global>
+        
+            <change_name>
+                
+                <str name="NEW_CLAN_TEXT">שבט</str>
+                <str name="NEW_CLAN_INPUT">שם חדש...</str>
+                
+            </change_name>
+            
+            <change_score>
+            
+                <str name="NEW_CLAN_INPUT">ערך...</str>
+                
+            </change_score>
+            
+            <change_role>
+            
+                <str name="NEW_CLAN_TEXT">תפקיד</str>
+            
+            </change_role>
+        
+        </clan>
+        
+        <login>
+            <str name="LOGIN_PANEL_TITLE">התחברות פאנל</str>
+            <str name="USER">שם משתמש</str>
+            <str name="PASSWORD">סיסמה</str>
+            <str name="PANEL_CODE">צופן פאנל</str>
+            <str name="WRONG_INFO">מידע התחברות שגוי</str>
+            <str name="LOGGED_IN">התחברת בהצלחה</str>
+            <inputs>
+                <str name="USER">שם המשתמש שלך...</str>
+                <str name="PASSWORD">סיסמת המשתמש שלך...</str>
+                <str name="PANEL_CODE">צופן</str>
+            </inputs>
+        </login>
+        
+        
+        <str name="DISPLAY_RESULTS">הצג תוצאות</str>
+        <str name="HIDE_RESULTS">החבא תוצאות</str>
+        <str name="N_DATA">אין מידע להציג</str>
+        <str name="RESULT">תוצאה</str>
+        
+        <str name="SEND">שלח</str>
+        <str name="UPDATE">עדכן</str>
+        <str name="CANCLE">בטל</str>
+        <str name="RESET">אפס נתונים</str>
+        <str name="LOGIN">התחבר</str>
+        
+    </form>
+    
+    <settings>
+        <str name="CATEGORY_ROLES">הגדרות הקטגוריה</str>
+        <str name="ACTIONS_ROLES">הגדרות הפעולות</str>
+        
+        <str name="CATEGORY_NAME">שם הקטגוריה</str>
+        <str name="ACTION_NAME">שם הפעולה</str>
+        <str name="ALL_ACTIONS">כל הפעולות</str>
+        
+        <str name="INPUT_EXISTS">קיים</str>
+        <str name="INPUT_ACTIVE">פעיל</str>
+        <str name="INPUT_DISPLAY">מוצג</str>
+    </settings>
+    
+</actions>

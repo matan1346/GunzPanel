@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<property>
+    <account>
+        <str name="AID">AID</str>
+        <str name="USER_ID">שם משתמש</str>
+        <str name="NAME">שם</str>
+        <str name="MAIL">מייל</str>
+        <str name="AGE">גיל</str>
+        <str name="GRID">סיווג</str>
+    </account>
+    <character>
+        <str name="CID">CID</str>
+        <str name="NAME">שם</str>
+        <str name="LEVEL">רמה</str>
+    </character>
+</property>

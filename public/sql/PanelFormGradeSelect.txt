@@ -1,0 +1,3 @@
+PFGSID - ID
+PFGrade - Grade of user
+PFSSID - ID of specific defined option

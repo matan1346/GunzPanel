@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+            <!--<meta http-equiv="content-type" content="text/html" />/-->
+            <meta charset="utf-8" /> 
+            <meta name="author" content="Matan" />
+    
+            <!--<meta charset="utf-8" />/--> 
+            <base href="{{ site_url }}" />
+      
+      
+      
+            <title>{{ title }}</title>
+        
+        
+            <!--  Start CSS Links   /-->
+                <link rel="stylesheet" type="text/css" href="public/css/reset.css" />
+                <!--<link rel="stylesheet" type="text/css" href="public/css/normalize.css" />/-->
+                <link rel="stylesheet" type="text/css" href="public/css/menu.css" />
+                <link rel="stylesheet" type="text/css" href="public/css/main.css" />
+                <link rel="stylesheet" type="text/css" href="public/css/panel.css" />
+                <link rel="stylesheet" type="text/css" href="public/css/panel_cont.css" />
+                <link rel="stylesheet" type="text/css" href="public/css/tables.css" />
+                <link rel="stylesheet" type="text/css" href="public/css/auto_complete.css" />
+                <link rel="stylesheet" type="text/css" href="public/css/updates.css" />
+                <link rel="stylesheet" type="text/css" href="public/css/credits.css" />
+                <link rel="stylesheet" type="text/css" href="public/css/chat.css" />
+                <link rel="stylesheet" type="text/css" href="public/css/system_messages.css" />
+                <link rel="stylesheet" type="text/css" href="public/css/search_results.css" />
+                <!--<link rel="stylesheet" type="text/css" href="public/css/rtl-style.css" />/-->
+                <!--<link rel="stylesheet" type="text/css" href="public/css/ui-lightness/jquery-ui-1.8.18.custom.css" />/-->
+                <!--<link rel="stylesheet" type="text/css" href="public/css/jquery-ui.css" />/-->
+                <link rel="stylesheet" type="text/css" href="public/css/flick/jquery-ui.css" />
+                <!--<link rel="stylesheet" type="text/css" href="public/css/reason_dialog.css" />/-->
+                
+                <!-- Start MultiSelect CSS /-->
+                    <link rel="stylesheet" type="text/css" href="public/css/multiselect/jquery.multiselect.css" />
+                    <link rel="stylesheet" type="text/css" href="public/css/multiselect/style.css" />
+                    <link rel="stylesheet" type="text/css" href="public/css/multiselect/prettify.css" />
+                <!-- End MultiSelect CSS /-->
+                
+                <!--<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" />/-->
+            {% for key, css_file_name in css_links %}
+                <link rel="stylesheet" type="text/css" href="public/css/{{ css_file_name }}" />
+            {% endfor %}
+            <!--  End CSS Links/-->
+    </head>
+    <body>
+        <!--  Start JS Links   /-->
+            <!--<script type="text/javascript" src="public/js/jquery-1.7.1.min.js"></script>/-->
+            
+            <!--<script type="text/javascript" src="public/js/jquery-ui-1.8.18.custom.min.js"></script>/-->
+            
+            <script type="text/javascript" src="public/js/jquery-1.11.1.js"></script>
+            <script type="text/javascript" src="public/js/flick/jquery-ui.js"></script>
+            <!--<script type="text/javascript" src="public/js/jquery-ui-1.10.4.js"></script>/-->
+            
+            
+            	
+            <script>
+            var _init = $.ui.dialog.prototype._init;
+            $.ui.dialog.prototype._init = function() {
+                //Run the original initialization code
+                _init.apply(this, arguments);
+                 
+                //Do not append Minimizable function
+                /*if(!this.options.minimizalbe)
+                    return false;*/
+                    
+                //set some variables for use later
+                var dialog_element = this;
+                var dialog_id = this.uiDialogTitlebar.next().attr('id');
+                 
+                //append our minimize icon
+                this.uiDialogTitlebar.append('<a href="javascript:void(0)" id="' + dialog_id + 
+                '-minbutton" class="ui-dialog-titlebar-minimize ui-corner-all">'+
+                '<span class="ui-icon ui-icon-minusthick"></span></a>');
+                 
+                //append our minimized state
+                $('#dialog_window_minimized_container').append(
+                    '<div class="dialog_window_minimized ui-widget ui-state-default ui-corner-all" id="' + 
+                    dialog_id + '_minimized">' + this.uiDialogTitlebar.find('.ui-dialog-title').text() + 
+                    '<span class="ui-icon ui-icon-newwin"></div>');
+                 
+                //create a hover event for the minimize button so that it looks good
+                $('#' + dialog_id + '-minbutton').hover(function() {
+                    $(this).addClass('ui-state-hover');
+                }, function() {
+                    $(this).removeClass('ui-state-hover');
+                }).click(function() {
+                    //add a click event as well to do our "minimalization" of the window
+                    dialog_element.close();
+                    $('#' + dialog_id + '_minimized').show();
+                });
+                 
+                //create another click event that maximizes our minimized window
+                $('#' + dialog_id + '_minimized').click(function() {
+                    $(this).hide();
+                    dialog_element.open();
+                });
+            };
+            </script>
+            
+            <script type="text/javascript" src="public/js/uidget.js"></script>
+            <script type="text/javascript" src="public/js/jquery-SelectText.js"></script>
+            <script type="text/javascript" src="public/js/menutool.js"></script>
+            <script type="text/javascript" src="public/js/sidemenu.js"></script>
+            <script type="text/javascript" src="public/js/chat.js"></script>
+            <script type="text/javascript" src="public/js/actions.js"></script>
+            <script type="text/javascript" src="public/js/search-actions.js"></script>
+            <script type="text/javascript" src="public/js/system_messages.js"></script>
+            
+            <!--<script type="text/javascript" src="public/js/jquery-1.3.2.min.js"></script>/-->
+            <!--<script type="text/javascript" src="public/js/jquery-ui-1.7.2.min.js"></script>
+            <!-- Start MultiSelect JS /-->
+                <script type="text/javascript" src="public/js/multiselect/prettify.js"></script>
+                <script type="text/javascript" src="public/js/multiselect/jquery.multiselect.js"></script>
+            <!-- End MultiSelect JS /-->
+            
+            <!--
+            {% if confirmbox == false %}
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+            <script type="text/javascript">
+            $(document).ready(function() {
+    
+                    if (!$.isFunction(window.live)) {
+                        //execute it
+                        //somenoobfunction();
+                        $('.player_link,.clan_link').bind('mouseover', function(){
+                        $(this).attr('target','_blank').attr('title', $(this).text()+'`s Profile');
+                        });
+                        
+                        $('.player_link,.clan_link').bind('mouseout', function(){
+                            $(this).removeAttr('title').removeAttr('target');
+                        });
+                    }
+                    
+                
+                
+             });
+            </script>
+            {% else %}
+            <script type="text/javascript">
+            $(document).ready(function() {
+    
+                    if (!$.isFunction(window.live)) {
+                        //execute it
+                        //somenoobfunction();
+                        $('.player_link,.clan_link').live('mouseover', function(){
+                        $(this).attr('target','_blank').attr('title', $(this).text()+'`s Profile');
+                        });
+                        
+                        $('.player_link,.clan_link').live('mouseout', function(){
+                            $(this).removeAttr('title').removeAttr('target');
+                        });
+                    }
+                    
+                
+                
+             });
+            </script>
+            {% endif %}
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+            <script type="text/javascript" src="public/js/jquery.easy-confirm-dialog.js"></script>
+            <script type="text/javascript" src="public/js/sidemenu.js"></script>
+            <script type="text/javascript">BASE_PLAYER_PROFILE_PATH = '{{BASE_PLAYER_PROFILE_PATH}}';BASE_CLAN_PROFILE_PATH = '{{BASE_CLAN_PROFILE_PATH}}';</script>
+            /-->
+            
+        <script type="text/javascript">
+        
+        isRTL = '{{isRTL}}';
+        
+        CHECK_ALL = '{{LANG.SELECT_SETTINGS.CHECK_ALL}}';
+        UNCHECK_ALL = '{{LANG.SELECT_SETTINGS.UNCHECK_ALL}}';
+        NONE_SELECTED = '{{LANG.SELECT_SETTINGS.NONE_SELECTED}}';
+        SELECTED = '{{LANG.SELECT_SETTINGS.SELECTED}}';
+        
+        ACTIONS_OPEN = '{{LANG.ACTIONS_OPEN}}';
+        ACTIONS_CLOSE = '{{LANG.ACTIONS_CLOSE}}';
+        
+        AUTO_COMPLETE_TEXT = '{{LANG.AUTO_COMPLETE_TEXT}}';
+        
+        
+        FORM_DISPLAY_RESULTS = "{{Actions['DISPLAY_RESULTS']}}";
+        FORM_HIDE_RESULTS = "{{Actions['HIDE_RESULTS']}}";
+        FORM_N_DATA = "{{Actions['N_DATA']}}";
+        FORM_RESULT = "{{Actions['RESULT']}}";
+        FORM_SEND = "{{Actions['SEND_FORM']}}";
+        FORM_UPDATE = "{{Actions['UPDATE_FORM']}}";
+        FORM_RESET = "{{Actions['RESET_FORM']}}";
+        
+        $(function(){
+        	//$("select").multiselect();
+            $("select:not(.original_select, .multi_select, .Search-Select, .Select-Options-Pick)").multiselect({
+               multiple: false,
+               header: false,
+               //height: 'auto',
+               minWidth: 210,
+               maxHeight: 130,
+               noneSelectedText: NONE_SELECTED,
+               selectedList: 1
+            });
+            
+            $('.Search-Select').multiselect({
+               multiple: false,
+               header: false,
+               //height: 'auto',
+               widthManually: false,
+               minWidth: '130',
+               maxHeight: 130,
+               noneSelectedText: NONE_SELECTED,
+               selectedList: 1
+            });
+            
+         
+            $('.dialog_window').dialog({
+                width: '700px',
+                /*height: '60%',
+                nonContentHeight: false,*/
+                autoOpen: false,
+                resizable: false,
+                z_index: 999
+            });
+            
+            
+            $('.accordion').accordion({
+                heightStyle: "content"
+            });
+        
+        });
+        </script>
+            
+        {% for key, js_file_name in js_links %}
+            <script type="text/javascript" src="public/js/{{ js_file_name }}"></script>
+        {% endfor %}
+        <!--  End JS Links/-->
+        
+        
+        	<!-- Reason Form End -->
+         
+        <div id="Panel-Lang-Holder">
+            <div id="Panel-Lang-Button">{{LANG['LANG_MENU']}}</div>
+            
+            <section id="Panel-Lang-List">
+                {% for LangKey, LangData in  LanguagesList%}
+                    <div class="Panel-Lang-Item" lang-key="{{LangKey}}" title="{{LangData['lang'][LangKey]['Country']}}">
+                        <img alt="" src="public/img/flags/{{LangKey}}.png" />
+                        <div class="Panel-Lang-Text">{{LangData['lang'][LangKey]['Language']}}</div>
+                    </div>
+                {% endfor %}
+            </section>
+        </div>      
+         
+        <div id="lights-off"></div>
+        
+        {% if UserConnected == true %}  
+        <!-- Start Actions Permissions/-->
+        
+        {% include 'layout/actions_permissions.html' %}
+        {% include 'layout/search_results.html' %}
+        
+        
+        <!-- End Actions Permissions/-->
+        {% endif %}
+        
+        <!--{% include 'layout/system_messages.html' %}/-->
+        
+        <div id="m_panel">	
+            <div id="logo"></div>
+
+	    
+            {% include 'layout/credits.html' %}
+
+	       
+            {% if UserConnected %}
+                <div id="hello_msg" class="text-shadow">{{LANG['HELLO_MSG']['HELLO']}} <span id="top_username">{{LANG['HELLO_MSG']['USERID']}}</span>, <a id="logout" href="logout">{{LANG['HELLO_MSG']['ACTION']}}?</a></div>
+            {% else %}
+                <div id="hello_msg" class="text-shadow">{{LANG['HELLO_MSG']['HELLO']}} <span id="top_username">{{LANG['HELLO_MSG']['ACTION']}}</span>...</div>
+            {% endif %}
+           
+      
+            <div id="panel">
+                <!--<div id="p_links">
+                    <div class="buttons">
+                                            </div>
+                </div>/-->
+                
+                {% if UserConnected == true %}
+                <nav id="Panel-Menu-Wrapper">
+                    <div id="Nav-Button-Left"><!--&#8249;/--></div>
+                    <div id="Panel-Menu">
+                        <section id="Panel-Menu-Content">
+                            {% for pageIndex, pageData in menu %}
+                                
+                                {% set add_nav_action = '' %}
+                                {% set tag_n = 'a' %}
+                                {% set flag_actions = false %}
+                                {% if PermissionsCategoryStatus[pageData['url']] is defined %}
+                                    {% set add_nav_action = '#actions:' %}
+                                    {% set tag_n = 'span' %}
+                                    {% set flag_actions = true %}
+                                {% endif %}
+                                
+                                <div class="Panel-Menu-Item">
+                                    {% if PermissionsCategoryStatus[pageData['url']] == true %}
+                                    <div class="Panel-Menu-Item-Title text-shadow Menu-Category-Active">
+                                    {% else %}
+                                    <div class="Panel-Menu-Item-Title text-shadow Menu-Category-InActive">
+                                    {% endif %}
+                                       <{{tag_n}} href="{{add_nav_action ~ pageData['url']}}" category-name="{{add_nav_action ~ pageData['url']}}">{{pageData['Name']}}</{{tag_n}}>
+                                    </div>
+                                    {% if pageData['sub_menu'] and pageData['sub_menu'] is not empty %}
+                                    
+                                    {% if PermissionsCategoryStatus[pageData['url']] is defined %}
+                                        {% set add_nav_action = '#actions:' ~ pageData['url'] ~ ':' %}
+                                    {% endif %}
+                                    <section class="Panel-Menu-Item-Sub-Menu">
+                                        {% for subMenuIndex, subMenuData in pageData['sub_menu'] %}
+                                            {% if subMenuData['url'] != 'search' %}
+                                            <div class="Panel-Menu-Item-Sub-Menu-Item">
+                                                {% if flag_actions == true %}
+                                                    {% if subMenuData['Active'] == true and subMenuData['Display'] == true %}
+                                                        <div class="Panel-Menu-Item-Sub-Menu-Title text-shadow Menu-Action-Active">
+                                                            <span href="{{add_nav_action ~ subMenuData['url']}}" action-name="{{add_nav_action ~ subMenuData['url']}}">{{subMenuData['Name']}}</span>
+                                                        </div>
+                                                    {% elseif subMenuData['Display'] == true %}
+                                                        <div class="Panel-Menu-Item-Sub-Menu-Title text-shadow Menu-Action-InActive">
+                                                            <span href="{{add_nav_action ~ subMenuData['url']}}" action-name="{{add_nav_action ~ subMenuData['url']}}">{{subMenuData['Name']}}</span>
+                                                        </div>
+                                                    {% else %}
+                                                        <div class="Panel-Menu-Item-Sub-Menu-Title text-shadow Menu-Action-InActive">
+                                                            <span>[HIDDEN]</span>
+                                                        </div>
+                                                    {% endif %}
+                                                {% else %}
+                                                    <div class="Panel-Menu-Item-Sub-Menu-Title text-shadow Menu-Action-InActive">
+                                                        <a href="{{subMenuData['url']}}" action-name="{{add_nav_action ~ subMenuData['url']}}">{{subMenuData['Name']}}</a>
+                                                    </div>
+                                                {% endif %}
+                                                <!--{% if subMenuData['Active'] == true %}
+                                                <div class="Panel-Menu-Item-Sub-Menu-Title text-shadow Menu-Action-Active">
+                                                {% else %}
+                                                <div class="Panel-Menu-Item-Sub-Menu-Title text-shadow Menu-Action-InActive">
+                                                {% endif %}
+                                                    <{{tag_n}} href="{{add_nav_action ~ subMenuData['url']}}" action-name="{{add_nav_action ~ subMenuData['url']}}">{{subMenuData['Name']}}</{{tag_n}}>
+                                                </div>/-->
+                                            </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </section>
+                                    <div class="Menu-Sign-Arrow"><sup>&#9662;</sup></div>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        </section>
+                        
+                    </div>
+                    <div id="Nav-Button-Right"><!--<sup>&#8250;</sup>/--></div>
+                </nav>
+                {% endif %}
+                
+                <div id="p_content">                        

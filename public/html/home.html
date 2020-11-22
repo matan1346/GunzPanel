@@ -1,0 +1,98 @@
+{% include 'layout/header.html' %}
+<div id="CreditsInLog">
+    <div class="Page-Title">Welcome To Quality Gunz Panel.</div>
+    <br />
+    <div class="CTR_TXT">Features:</div> 
+    <br />
+    <hr />
+    
+    <table id="iTable">
+        <tbody>
+            <tr>
+                <td>
+                  Code, Slice, Web Design
+                  <br />
+                  Liad Tropp
+                  <br />
+                  (troppliad@hotmail.com)
+                </td>
+            	 <td>
+                  Code, Slice, Web Design
+                  <br />
+                  Matan(Activity)
+                  <br />
+                  (matanfxp@hotmail.co.il)
+                </td>
+                <td>
+                  Design
+                  <br />
+                  Amit
+                  <br />
+                  (BunjiDesign)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr />
+
+<div id="ServerStatus"><!--<img src="http://127.0.0.1/staff/" />/--></div>
+
+<br />
+<div id="Home-Update-Logs-Container">
+    
+    <div id="Home-Update-Logs-Wrapper" class="table-logs">
+        <table id="Logs-Update" class="table-border table-shadow">
+            <thead>
+                <tr>
+                    <th id="UPD_LOG_NUMBER">NO.</th>
+                    <th id="UPD_LOG_TITLE">Title</th>
+                    <th id="UPD_LOG_AUTHOR">Author</th>
+                    <th id="UPD_LOG_DATE">Date</th>
+                    <th id="UPD_LOG_ACTION">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="LOG_UPDATE_ROW">
+                    <td>1</td>
+                    <td>New Anti-lead ;)</td>
+                    <td>aRandoMatan</td>
+                    <td class="DateLog">12/01/2015 13:56</td>
+                    <td>
+                        <section class="ActionsButtons">
+                            <div class="Act-Button Act-Read-Content" target="LOG-UPD-CNT-1"><input type="button" value="Read" /></div>
+                            <div class="Act-Button Act-Delete-Log"><input type="button" value="Delete" /></div>
+                        </section>
+                    </td>
+                </tr>
+                <tr class="LOG_UPDATE_ROW">
+                    <td>2</td>
+                    <td>New Panel ith many features</td>
+                    <td>aRandoMatan</td>
+                    <td class="DateLog">15/01/2015 12:11</td>
+                    <td>
+                        <section class="ActionsButtons">
+                            <div class="Act-Button Act-Read-Content" target="LOG-UPD-CNT-2"><input type="button" value="Read" /></div>
+                            <div class="Act-Button Act-Delete-Log"><input type="button" value="Delete" /></div>
+                        </section>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="Home-Update-Logs-Data-Wrapper" class="box-shadow">
+        <div class="Act-Button Act-Back-Logs"><input type="button" value="Logs->" /></div>
+        <div class="LogData" id="LOG-UPD-CNT-1">
+        New Anti lead has been published, 
+        We hope that all of you will enjot this system and lpost a positive feedback =]
+        </div>
+        <div class="LogData" id="LOG-UPD-CNT-2">
+        New Anti lead has been published, --
+        We hope that all of you will enjot this system and lpost a positive feedback =]
+        </div>
+    </div>
+</div>
+
+
+{% include 'layout/footer.html' %}

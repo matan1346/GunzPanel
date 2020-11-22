@@ -1,0 +1,163 @@
+#Testing
+{
+    position: fixed;
+    bottom: 0;
+}
+
+/*.Panel-Search-Results-Item
+{
+    display: table;
+    position: fixed;
+    width: 60%;
+    left: 20%;
+    height: 70%;
+    top: 15%;
+    background-color: rgba(204, 204, 204, 0.9);
+    border: 10px solid #4A4A4A;/*#327682;/*#037589;*/
+    /*
+    border-radius: 10px;
+    z-index: 999;
+}
+*/
+
+.Panel-Search-Results-Item
+{
+    height: 90%;
+}
+
+.Panel-Search-Results-Item-Top-Bar
+{
+    width: 100%;
+    /*line-height: 30px;*/
+    height: 0px;/*8%;*/
+    display: table-row;
+    background-color: white;
+}
+
+.Panel-Search-Results-Item-Title
+{
+    display: inline-block;
+    
+    color: rgb(32, 71, 92);
+    font-size: 19pt;
+}
+
+.Panel-Search-Results-Item-Title:hover
+{
+    cursor: default;
+}
+
+.Panel-Search-Results-Item-Title:before
+{
+    content:'';
+    margin-left: 5px;
+}
+
+.Panel-Search-Results-Item-Buttons
+{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 5px;  
+}
+
+.Panel-Search-Results-Item-Buttons:after
+{
+    content: '';
+    margin-right: 5px;
+}
+
+.Panel-Search-Results-Item-SideMenu
+{
+    display: table-row;
+    float: left;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.10);
+    /*border-right: 1px solid red;*/    
+    width:  25%;
+}
+
+
+.Panel-Search-Results-Item-Contexts
+{
+    display: inline-block;
+    /*background-color: red;*/
+    margin-left: 1%;
+    width: 74%;
+    background-color: rgba(13, 62, 79, 0.42);
+    height: 100%;
+}
+
+/*
+.Panel-Search-Results-Item-Buttons input
+{
+    vertical-align: -webkit-baseline-middle;
+}*/
+
+.dialog_window
+{
+    display: block;
+}
+
+.Profile-Info-Container
+{
+    width: 100%;
+}
+
+.Profile-Info-Picture
+{
+    background-color: #5f5b5b;
+    width: 24%;
+    height: 142px;
+    float: left;
+}
+
+.Profile-Info-Details
+{
+    font-size: 7pt;
+    width: 75%;
+    float: right;
+}
+
+.Search-Result-Table
+{
+    width: 100%;
+    margin-bottom: 10px;
+    table-layout: fixed;
+}
+
+.Search-Result-Table:hover
+{
+    cursor: default;
+    background-color: rgb(195, 233, 255);/*#DEDEDE;/*#BADCFF;*/
+}
+
+.Search-Result-Table thead th
+{
+    background-color: rgb(16, 78, 100);/*#616161;*/
+    color: white;
+    border: 1px solid black;/*white;*/
+    /*width: 33.3%;*/
+}
+
+.Search-Result-Table tbody tr td
+{
+    text-align: center;
+    font-size: 9pt;
+    border: 1px solid black;
+    /*line-height: 30px;*/
+    word-break: break-all;
+}
+/*
+.Search-Result-Table tbody tr td:after
+{
+    margin-right: 5px;
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    float: right;
+    margin-top: -32px;
+    
+    background: url(../img/copy.png) no-repeat 0px 0px;
+}*/

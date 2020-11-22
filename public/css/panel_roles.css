@@ -1,0 +1,601 @@
+#Panel-Roles-Wrapper
+{
+    width: 90%;
+    /*min-height: 90%; /*auto /*90%;*/
+    margin: auto;
+    margin-bottom: 20px !important;
+    background-color: beige;
+    box-shadow: 1px 0px 5px #353535;
+    
+    border-radius: 10px;
+}
+
+.Loading-Changes
+{
+    display: none;
+    width: inherit;
+    height: inherit;
+    min-height: inherit;
+    position: absolute;
+    background-color: black;
+    z-index: 99999999999;
+    opacity: 0.7;
+}
+
+.Loading-Changes #ajax_loader
+{
+    position: absolute;/*relative;*/
+  margin: auto;
+  top: 45%;
+  left: 45%;
+  background: url(../img/ajax-loader.gif) no-repeat;
+  width: 80px;
+  height: 63px;
+  background-size: 100% 100%;
+}
+
+/*
+#Panel-Roles-Menu
+{
+    width: 100%;
+    height: 10%;
+    background-color: cadetblue;
+    border-bottom: 1px solid rgb(7, 122, 161);
+}
+
+#Panel-Roles-Menu-Data
+{
+    height: 100%;
+}
+
+#Panel-Roles-Menu-Data-Grade
+{
+    width: 25%;
+    display: inline-block;
+    height: 100%;
+}
+
+#Panel-Roles-Menu-Data-Category
+{
+    display: inline-flex;
+    width: 74%;
+}
+
+#Panel-Roles-Side-Menu
+{
+    width: 25%;
+    height: 90%;
+    background-color: rgb(123, 148, 157);
+}
+*/
+
+#Panel-Roles-Menu
+{
+    width: 100.1%;
+    height: 100%;
+    table-layout: fixed;
+    
+    font-family: verdana;
+}
+
+#Panel-Roles-Menu tr:first-child
+{   
+    height: 10%;
+    background-color: cadetblue;
+    border-bottom: 1px solid rgb(7, 122, 161);
+}
+
+#Panel-Roles-Menu > tbody > tr:first-child
+{   
+    background-color: rgb(13, 62, 79);/*cadetblue;*/
+}
+
+#Panel-Roles-Select-Grades, #Panel-Roles-Select-Categories
+{
+    width: 90%;/*75%;*/
+    margin: auto;
+    line-height: 40px;
+}
+
+#Panel-Roles-Select-Grades > span
+{
+    color: white;
+    vertical-align: middle;
+}
+
+#Panel-Roles-Select-Grades > #SelectGrades-Container
+{
+    float: right;
+    margin-top: 2px;
+}
+
+#Panel-Roles-Select-Categories
+{
+    color: white;
+    cursor: default;
+    text-align: center;
+}
+
+#Panel-Roles-Select-Categories .Panel-Roles-Category-Item
+{
+    display: inline-block;
+}
+
+.Panel-Roles-Category-Item:hover
+{
+    color: rgb(33, 197, 255);
+    cursor: pointer;
+}
+
+.Panel-Roles-Category-Item:before
+{
+    content:'';
+    margin-left: 30px;
+}
+
+.Panel-Roles-Category-Item:after
+{
+    content:'';
+    margin-right: 30px;
+}
+
+.Panel-Roles-Category-Item-Selected
+{
+    color: orange;
+}
+
+#Panel-Roles-Category-Info
+{
+    display: none;
+}
+
+#Panel-Roles-Category-Info td 
+{
+    vertical-align: top;
+}
+
+#Panel-Roles-Category-Info td:first-child input[type=checkbox]
+{
+    vertical-align: middle;
+}
+
+#Panel-Roles-Category-Title
+{
+    line-height: 20px;
+}
+
+#Panel-Roles-Category-Title label
+{
+    vertical-align: middle;
+}
+
+.Panel-Roles-Category-Actions
+{
+    display: none;
+}
+
+.Panel-Roles-Category-Actions-Selected
+{
+    /*display: block !important;*/
+}
+
+.Panel-Roles-Category-Actions table
+{
+    width: 100%;
+    border-top: 1px solid rgb(13, 62, 79);
+    border-bottom: 1px solid rgb(13, 62, 79);
+}
+
+.Panel-Roles-Category-Actions table tr
+{
+    line-height: 20px;
+}
+
+.Panel-Roles-Category-Actions table th
+{
+    width: 10%;
+    color: lavender;/*rgb(176, 255, 252);/*rgb(84, 211, 255);*/
+    font-size: 8pt;
+    border-left: 1px solid rgb(13, 62, 79);
+}
+
+.Panel-Roles-Category-Actions table th:first-child
+{
+    border-left: none;
+}
+
+.Panel-Roles-Category-Actions table td
+{
+    border-left: 1px solid rgb(13, 62, 79);
+    text-align: center;
+    background-color: white/* !important*/;
+}
+
+.Panel-Roles-Category-Actions table td:last-child
+{
+    text-align: center;
+    
+    background-color: rgb(32, 71, 92) /*!important*/;
+    
+    font-style: italic;
+    font-size: 11px;
+    color: gray;
+    
+    text-decoration: line-through;
+}
+
+.Panel-Roles-Category-Actions table:first-child td:last-child
+{
+    font-size: 13pt;
+    font-variant: small-caps;
+}
+
+.Panel-Roles-Category-Actions table:last-child td:last-child
+{
+    text-align: left /*!important*/;
+}
+
+.Panel-Roles-Category-Actions table:last-child tr:nth-child(2)
+{
+    /*border-bottom: 1px dotted cadetblue/*rgb(32, 71, 92)*/;
+}
+
+.Panel-Roles-Category-Actions table:last-child tr:nth-child(2) td
+{
+    background-color: rgb(163, 192, 255) !important;
+}
+/*
+.Panel-Roles-Category-Actions table:last-child tr:nth-child(2) td:last-child
+{
+    text-align: center !important;
+      /*border-bottom: 1px solid white !important;*/
+/*}
+*/
+.Panel-Roles-Category-Actions table:last-child
+{
+    margin-bottom: 10px;
+}
+
+.Action-Item:hover td:last-child:not(.Action-Category-Selected)
+{
+    /*background-color: rgba(32, 71, 92, 0.5) !important;*/
+    cursor: default;/*pointer;*/
+}
+
+.Action-Category-Selected
+{
+    background-color: rgba(3, 93, 132, 1) !important;
+    cursor: default;
+  /* background-color: rgb(18, 103, 132) !important; */
+    text-align: center !important;
+    
+    /*border-top: 1px solid rgb(163, 192, 255);
+    border-bottom: 1px solid rgb(163, 192, 255);*/
+}
+
+/*.Panel-Roles-Category-Actions table:last-child tr:nth-child(1) td:last-child,.Panel-Roles-Category-Actions table:last-child tr:nth-child(2) td:last-child
+{
+    background-color: auto !important;
+}
+*/
+.Action-Category-Display
+{
+    color: rgb(0, 207, 255)/*rgb(100, 196, 255)/*lime*/ !important;
+}
+
+.Action-Category-Active
+{
+    text-decoration: none !important;
+}
+
+.Action-Category-Approve
+{
+    background: url(../img/approve.png) right no-repeat;
+    background-size: 10px 10px;
+    /*background-position: 0px 5px;*/
+    
+}
+
+.Panel-Roles-Category-Actions table td:before
+{
+   content: '';
+   margin-left: 10px; 
+}
+
+.Panel-Roles-Category-Actions table td:after
+{
+   content: '';
+   margin-right: 10px; 
+}
+
+.Panel-Roles-Category-Actions table td:first-child
+{
+    border-left: none;
+}
+
+.Panel-Roles-Category-Actions table tr:nth-child(2) td:last-child
+{
+    text-align: center !important;
+    background-color: rgba(13, 62, 79, 1) !important;
+    font-size: 10pt;
+    border-bottom: 1px solid cadetblue;
+    /*border-bottom: 1px solid white;*/
+    /*font-variant: small-caps;*/
+
+}
+
+/*#Panel-Roles-Menu > tbody > tr:last-child > td:first-child
+{
+    background-color: rgb(123, 148, 157);
+}*/
+
+#Panel-Roles-Menu > tbody > tr:last-child
+{
+    display: none;
+}
+
+#Panel-Roles-Menu > tbody > tr:last-child > td
+{
+    
+    background-color: rgba(13, 62, 79, 0.85);
+    color: white;
+    text-align: center;
+    line-height: 25px;
+}
+
+#Panel-Roles-Menu > tbody > tr:last-child > td:hover
+{
+    background-color: #0D3E4F;
+    color: lime;
+    cursor: pointer;
+}
+
+
+#Panel-Roles-Menu > tbody > tr > td:first-child
+{
+    width: 50%;/*40%;*/
+    border-right: 1px solid rgb(7, 122, 161);
+}
+
+#SaveActionsTitle
+{
+    background-color: #E0E0E0 !important;
+    text-align: center;
+    border: none !important;
+    line-height: 35px;
+    
+}
+
+#SaveActionsTitle span
+{
+    color: rgb(140, 0, 0);
+    /* font-style: italic; */
+    font-family: fantasy;
+    font-size: 14pt;
+    text-transform: uppercase;
+}
+
+#AddSpace
+{
+    height: 20px;
+}
+
+#Panel-Roles-Menu tr td:last-child
+{
+    width: 50%;/*60%;*/
+}
+
+#Selection-Wrapper
+{
+    /*vertical-align: 0px !important;*/
+    background-color: rgb(123, 148, 157);/*white;/*rgb(3, 117, 137)/*rgb(3, 117, 137)*/;
+}
+
+#Selection-Container
+{
+    height: 300px/*max-height: 380px*/;
+    width: 100%;
+    overflow-y: overlay;
+}
+
+.Selection-Action
+{
+    display: block;
+    width: 98%;
+}
+
+#SelectionList-Container
+{
+    width: 102%;
+    min-height: 21px;
+    /* background-color: white; */
+    text-align: center;
+    background-color: rgb(32, 71, 92) /*!important*/;
+    font-style: italic;
+    font-size: 15px;
+    color: white;
+    border-top: 1px solid #989898;
+    border-bottom: 1px solid #989898
+}
+
+#SelectionList-Container div
+{
+    margin: auto;
+}
+
+#Selection-List
+{
+    width: 95%;
+    margin: auto;
+    line-height: 40px;
+}
+
+#AddSelectionButton
+{
+    vertical-align: middle;
+    margin-left: 20px;
+        position: relative;
+    bottom: 1px;
+
+}
+
+.Selection-Info
+{
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.Selection-Info .SelectionItem
+{
+    display: inline-block;
+    /*padding-bottom: 5px;
+    margin-left: 10px;*/
+    width: 100%;
+    height: auto !important;
+    background-color: inherit !important;
+    /*border-bottom: none !important;*/
+    border-bottom: 1px solid rgb(7, 122, 161);
+    padding-bottom: 5px;
+}
+
+.Selection-Info .SelectionItem label
+{
+        font-size: 13px;
+        color: lightcyan;
+}
+
+.Selection-Info .SelectionItem label sup
+{
+    text-transform: uppercase;
+    font-size: 6pt;
+    color: #0D3E4F;
+    text-shadow: none !important;
+    font-weight: bold;
+}
+
+.Selection-Info .SelectionItem:last-child
+{
+    border-bottom: none !important;
+}
+
+.Selection-Info .SelectionItem td:first-child
+{
+    width: 30%;
+    color: rgb(13, 62, 79);
+    font-size: 15pt;
+    font-family: verdana;
+    float: left;
+}
+
+.Selection-Info .SelectionItem td:last-child
+{
+    float: right;
+    width: auto !important;
+}
+
+.Selection-Info .SelectionItem .SelectItemCheckBox
+{
+    vertical-align: middle;
+}
+
+#Selection-Cell
+{/*
+      width: 95%;
+      height: 94%;
+      margin: 17px auto 0px auto;
+      background-color: white;*/
+      /*height: 94%;
+      margin: 17px auto 0px auto;
+      background-color: rgb(123, 148, 157);/*rgb(3, 117, 137)/*white*/
+}
+
+
+#Panel-Roles-Menu > tbody > tr:first-child > td:first-child
+{
+    border-top-left-radius: 10px;
+}
+
+#Panel-Roles-Menu > tbody > tr:first-child > td:last-child
+{
+    border-top-right-radius: 10px;
+}
+
+
+#Panel-Roles-Menu > tbody > tr:last-child > td:first-child
+{
+    border-bottom-left-radius: 10px;
+}
+
+#Panel-Roles-Menu > tbody > tr:last-child > td:last-child
+{
+    border-bottom-right-radius: 10px;
+}
+
+
+/*
+#Panel-Roles-Menu > tbody > tr:last-child > td
+{
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+  */
+.sticky {
+    width: 100%;
+}
+
+.sticky tbody, .sticky tr, .sticky td, .sticky th { display: block; }
+
+.sticky tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*.sticky thead th {
+    height: 30px;
+    width: 100%;
+    /*text-align: left;*/
+/*}*/
+
+.sticky tbody {
+    height: 120px;
+    overflow-y: auto;
+}
+
+.sticky thead {
+    /* fallback */
+    /*display: inline-block;*/
+}
+
+.sticky thead th, .sticky tbody td{
+      /*display: table-cell;*/
+    float: left;
+    /*width: 10%;*/
+}
+
+.sticky thead th, .sticky thead td
+{
+    width: 15.9% !important;
+    float: left;
+}
+
+.sticky thead th:last-child
+{
+    width: 51.5% !important;
+}
+
+.sticky thead td:last-child
+{
+  width: 51.5% !important;
+}
+.sticky tbody td
+{
+      width: 16.4% !important;
+}
+
+.sticky tbody td:last-child/*, .sticky thead th*/ {
+    width: 50% !important;/*19.2%;*/
+    /*float: left;*/
+}

@@ -1,0 +1,99 @@
+#System-Messages-Wrapper
+{
+    position: fixed;
+    width: 400px;/*300px;/*25%;*/
+    max-height: 500px;/*75%;*/
+    min-height: 20px;/*150px;*/
+    /*background-color: rgba(88, 87, 87, 0.52);*/
+    
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: -3px -1px 5px black !important;/*-2px -1px 2px #104E64;*/
+    
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+}
+
+#System-Messages-Content
+{
+    /*display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    */
+    /*margin: auto;
+    margin-top: 5%;*/
+    width: 100%;
+    height: 100%;
+    
+    /*height: 97.5%;*/
+    
+}
+
+/*#System-Messages-Title
+{
+    position: absolute;
+    margin-top: -15px;
+}*/
+
+#System-Messages-Data
+{
+    /*width: 96%;
+    max-height: 97.5%;
+    */
+    
+    width: 380px;
+    max-height: 360px;
+    
+    background-color: rgba(5, 111, 96, 0.35);
+    
+    margin: auto;
+    
+    overflow-y: overlay;
+    
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#System-Messages-Title
+{
+    /*position: absolute;
+    margin-top: -15px;*/
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    line-height: 20px;
+}
+
+#System-Messages-Title:hover
+{
+    color: #FFFFFF;
+    background-color: #0D3E4F;
+    cursor: pointer;
+}
+
+.System-Messages-Item
+{
+    position: relative;
+    margin-top: 1px;
+    background-color: #07546F;
+    height: 35px;
+}
+
+.System-Messages-Item:hover
+{
+    background-color: #0B7AA0;
+    cursor: pointer;
+}
+
+.System-Messages-Item div
+{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+}

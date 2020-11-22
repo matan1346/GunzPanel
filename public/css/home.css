@@ -1,0 +1,144 @@
+
+
+#Home-Update-Logs-Container
+{
+    
+    
+    margin: auto;
+}
+
+#Logs-Update
+{
+    font-family: verdana;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: #060606 0.1em 0.1em 0.2em;
+    
+    
+    margin: auto;
+    width: 90%;
+    border-collapse: collapse;/*inherit;
+    
+    
+    
+    border-top-right-radius: 10px 10px;
+    border-top-left-radius: 10px 10px;*/
+}
+
+#Logs-Update thead tr
+{
+    height: 25px;
+    
+    color: rgb(49, 106, 131);
+    text-shadow: none;
+    /*border-top-right-radius: 10px 10px;
+    border-top-left-radius: 10px 10px;*/
+}
+/*
+#Logs-Update thead tr th:first-child
+{
+    /*width: 50px;
+    
+    border-top-left-radius: 10px 10px;
+}
+
+#Logs-Update thead tr th:last-child
+{
+    /*width: 100px;
+    
+    border-top-right-radius: 10px 10px;
+}
+*/
+#Logs-Update tbody tr
+{
+    height: 50px;
+    
+    background-color: rgba(49, 106, 131, 0.5);
+}
+
+#Logs-Update tbody tr:hover
+{
+    color: white;
+    background-color: rgba(49, 106, 131, 0.8);
+}
+
+#Logs-Update tbody tr td:first-child
+{
+    text-align: center;
+}
+
+
+#Logs-Update tbody tr td .LogContent
+{
+    display: none;
+    position: absolute;/*fixed;*/
+    color: black;
+    width: 100%;
+    background-color: red;
+    height: 50%;
+    /* margin: auto; */
+    left: 110%;/*85%;*/
+    top: 0%;/*25%;*/
+}
+
+
+#Logs-Update th
+{
+    /*width: 75%;/*27%;*/
+}
+
+#UPD_LOG_NUMBER
+{
+    width: 10%;
+}
+
+#UPD_LOG_TITLE
+{
+    width: 45%;
+}
+
+#UPD_LOG_AUTHOR
+{
+    width: 15%;
+}
+
+#UPD_LOG_DATE
+{
+    width: 15%;
+}
+
+#UPD_LOG_ACTION
+{
+    width: 15%;
+}
+
+
+
+/*Actions Buttons*/
+
+.ActionsButtons
+{
+    width: 90%;
+    margin: auto;
+}
+
+.Act-Button
+{
+    display: inline-block;
+}
+
+.Act-Button input[type=button]
+{
+    border-radius: 10px 10px;
+    background-color: lightgrey;
+    padding: 0px 6px;
+    border: none;
+}
+
+.Act-Button input[type=button]:hover
+{
+    /*color: rgb(0, 168, 255);
+    font-weight: bold;*/
+    color: rgb(255, 145, 0);
+    background-color: black;
+}

@@ -1,0 +1,29 @@
+{% include 'layout/header.html' %}
+<div id="Login-Container">
+    <div class="Page-Title">{{LOGIN_SETTINGS['LOGIN_PANEL_TITLE']}}</div><br />
+    <form action="home" method="POST">
+        <table id="Login-Form">
+            <tr>
+                <td><label for="LoginUser_Field">{{LOGIN_SETTINGS['FIELDS']['USER']}}:</label></td>
+                <td><input type="text" name="UserNameL" id="LoginUser_Field" size="25" maxlength="20" autocomplete="off" placeholder="{{LOGIN_SETTINGS['INPUTS']['USER']}}" required="required" autofocus="autofocus" /></td>
+            </tr>
+            <tr>
+                <td><label for="PassUser_Field">{{LOGIN_SETTINGS['FIELDS']['PASSWORD']}}:</label></td>
+                <td><input type="password" name="PassWordL" id="PassUser_Field" size="25" maxlength="20" autocomplete="off" placeholder="{{LOGIN_SETTINGS['INPUTS']['PASSWORD']}}" /></td>
+            </tr>
+            <tr>
+                <td><label for="PanelCode_Field">{{LOGIN_SETTINGS['FIELDS']['PANEL_CODE']}}:</label></td>
+                <td><input type="password" name="PanelCodeL" id="PanelCode_Field" size="3" maxlength="10" autocomplete="off" placeholder="{{LOGIN_SETTINGS['INPUTS']['PANEL_CODE']}}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><div id="Login_Button"><input type="submit" name="SubmitL" value="{{LOGIN_SETTINGS['LOGIN']}}" /></div></td>
+            </tr>
+            {% for i, loginMessage in LOGIN_SETTINGS['LOGIN_MESSAGES']['System'] %}
+            <tr>
+                <td colspan="2">{{loginMessage}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+</div>
+{% include 'layout/footer.html' %}

@@ -1,0 +1,25 @@
+.autocomplete
+{
+	background-color:#FAFAFA;
+	border:1px solid #A1A1A1;
+	border-top-style:none;
+	border-bottom-style: none;	
+
+	opacity:0.8;
+}
+
+.autocomplete-data
+{
+	background-color:#FAFAFA;
+	border-bottom:1px solid #A1A1A1;
+
+	font-size: 12px;
+	padding: 4px 2px;
+
+	cursor: pointer;
+}
+
+.autocomplete-data-selected
+{
+	background-color: #B6B6B6;
+}

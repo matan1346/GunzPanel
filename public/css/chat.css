@@ -1,0 +1,260 @@
+#chat_container
+{
+	width: 800px;
+	height: 400px;
+
+	position: relative;
+	left: 30px;
+}
+
+#chat_online
+{
+	width: 166px;
+	height: 400px;
+
+	float: left;
+}
+
+#online_title
+{
+	width: 166px;
+	height: 29px;
+	background-image: url('../img/chat/online_top.png');
+	background-repeat: none;
+}
+
+#online_users
+{
+	width: 166px;
+}
+
+#online_users .chat_user_online
+{
+	width: 166px;
+	height: 29px;
+	background-image: url('../img/chat/online_pattern.png');
+	background-repeat: none;
+
+	text-align: left;
+
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	font-style:italic;
+
+	padding-top: 10px;
+	padding-left: 18px;
+
+	color: #EAEAEA;
+
+	overflow: hidden;
+}
+
+#online_bottom
+{
+	width: 198px;
+	height: 32px;
+	background-image: url('../img/chat/online_bottom.png');
+	background-repeat: none;
+
+	position: relative;
+	z-index: 98;
+}
+
+
+#chat_body
+{
+	width: 634px;
+	height: 400px;
+	background-image: url('../img/chat/body.png');
+	background-repeat: none;
+
+	float: left;
+}
+
+#chat_box_spacer
+{
+	width: 100%;
+	height: 369px;
+}
+
+#chat_box
+{
+	width: 593px;
+	height: 340px;
+
+	position: relative;
+	top: 29px;
+	left: 21px;
+
+	overflow-y: scroll;
+}
+
+#chat_advanced
+{
+	width: 20px;
+	height: 20px;
+
+	position: relative;
+	top: 3px;
+
+	float: left;
+
+	font-weight: bold;
+	font-size: 20px;
+	color: #FFF;
+
+	cursor: pointer;
+	z-index: 100;
+}
+
+#chat_msg
+{
+	width: 593px;
+	height: 20px;
+
+	position: relative;
+	left: 21px;
+	top: 3px;
+}
+
+#chat_msg .input
+{
+	height: 20px;
+	width: 543px;
+
+	float: left;
+}
+
+#chat_msg .wysiwyg
+{
+	width: 543px;
+	float: left;
+	position: relative;
+	z-index: 100;
+}
+
+#chat_msg .submit
+{
+	height: 20px;
+	width: 50px;
+
+	float: right;
+}
+
+#chat_box .msg_holder
+{
+	min-height: 40px;
+	width: 100%;
+
+	overflow: hidden;
+
+	border: 1px dotted 000;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+
+	margin-top: 15px;
+}
+
+#chat_box .msg_holder .msg_title
+{
+	height: 20px;
+	width: 100%;
+	opacity: 0.8;
+}
+
+#chat_box .msg_holder .msg_title .msg_sender
+{
+	float: left;
+	padding-left: 2px;
+}
+
+#chat_box .msg_holder .msg_title .msg_time
+{
+	float: right;
+	padding-right: 2px;
+}
+
+#chat_box .msg_holder .msg_content_left
+{
+	clear: both;
+	min-height: 20px;
+	width: 100%;
+
+	font-weight: bold;
+	text-align: left;
+	padding-left: 6px;
+
+	overflow: hidden;
+}
+
+#chat_box .msg_holder .msg_content_right
+{
+	clear: both;
+	min-height: 20px;
+	width: 100%;
+
+	font-weight: bold;
+	text-align: right;
+	direction:rtl;
+	padding-right: 6px;
+
+	overflow: hidden;
+}
+
+#sub_menu
+{
+	width: 100px;
+	min-height: 20px;
+
+	background-color: #000;
+
+	position: absolute;
+
+	border:1px dotted #888;
+}
+
+#sub_table
+{
+	width: 100%;
+	min-height: 20px;
+	background-color: #EAEAEA;
+
+	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
+	color: #000;
+}
+
+#sub_table tr
+{
+	width: 100%;
+	height: 20px;
+	background-color: #EAEAEA;
+
+	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
+	color: #000;
+}
+
+#sub_table td
+{
+	width: 100%;
+	height: 20px;
+	background-color: #EAEAEA;
+
+	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
+	color: #000;
+
+	cursor: pointer;
+}
+
+#sub_table td:hover
+{
+	text-shadow:0px 0px 2px #FFCA3B;
+}

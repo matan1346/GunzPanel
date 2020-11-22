@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+
+    <en>
+        <str name="COUNTRY">ארצות הברית</str>
+        <str name="LANGUAGE">אנגלית</str>
+    </en>
+    
+    <he>
+        <str name="COUNTRY">ישראל</str>
+        <str name="LANGUAGE">עברית</str>
+    </he>
+
+</list>

@@ -1,0 +1,63 @@
+#p_links
+{
+	width:888px;
+	height:36px;
+
+
+	text-align:center;
+	font-family:"Arial";
+	font-size:12pt;
+	font-weight:bold;
+
+	color:#a1a1a1;
+	word-spacing:20px;
+}
+
+#link
+{
+	color:#000;
+	text-shadow:-1px 1px 2px #a1a1a1;
+
+	opacity:0.7;
+}
+
+#link:hover
+{
+	cursor:pointer;
+	color: orange;
+	text-shadow:-1px 1px 2px #f68243;
+}
+
+#p_content
+{
+	width:882px;
+	height:490px;
+
+	margin-left:auto;
+	margin-right:auto;
+
+	margin-top:10px;
+
+	text-align:center;
+	font-family:"Arial";
+	font-size:14px;
+
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+#title
+{
+	font-weight:bold;
+	font-size:13px;
+
+	text-shadow:-1px 1px 1px #AAA;
+
+	color: #111;
+	opacity:0.8;
+}
+
+.form
+{
+	height:160px;
+}

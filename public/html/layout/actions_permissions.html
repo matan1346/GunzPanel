@@ -1,0 +1,73 @@
+        
+        
+        <div id="Side-Menu-Wrapper">
+            <div id="Side-Menu-Title">{{LANG.ACTIONS_MENU_TITLE}}</div>
+            <div id="Side-Menu-Button">{{LANG.ACTIONS_OPEN}}</div>
+            <div id="Side-Menu-Content-Wrapper">
+                <section id="Side-Menu-Content">
+                    {% if PermissionsAccess == true %}
+                    {% for PCID, CategoryData in Permissions %}
+                        {% import "layout/forms/actions/" ~ CategoryData['url'] ~ "-forms.html" as CategoryForm %}
+                        <section class="Side-Menu-Action-Category" category-name="{{CategoryData['url']}}" category-id="{{CategoryData['PCID']}}">
+                            {% if PermissionsCategoryStatus[CategoryData['url']] != null and PermissionsCategoryStatus[CategoryData['url']] == true %}
+                                    <div class="Side-Menu-Action-Category-Text">{{CategoryData['Name']}}</div>
+                            {% else %}
+                                <div class="Side-Menu-Action-Category-Text Category-InActive">{{CategoryData['Name']}}</div>
+                            {% endif %}
+                            <section class="Side-Menu-Action-List">
+                                {% if CategoryData['sub_menu'] != null %}
+                                    {% for ActionIndex, ActionData in CategoryData['sub_menu'] %}
+                                        <div class="Side-Menu-Action-Item" action-name="{{ActionData['url']}}" action-id="{{ActionData['PAID']}}">
+                                            {% if ActionData['url'] == 'search' %}
+                                            
+                                            {% elseif ActionData['Active'] == true and ActionData['Display'] == true %}
+                                                <div class="Side-Menu-Action-Item-Text">{{ActionData['Name']}}</div>
+                                                <div class="Side-Menu-Action-Item-Form">
+                                                    <div class="Menu-Form-Item" id="{{CategoryData['url']|upper}}-{{ActionData['url']|upper}}-Form">
+                                                        <div class="Menu-Form-Item-Title"><span>{{CategoryData['Name']}}</span> {{ActionData['Name']}}</div>
+                                                        {{ attribute(CategoryForm, (ActionData['url'])) }}
+                                                    </div>
+                                                    <div class="Menu-Form-Item-Reason-Wrapper">
+                                                        <div class="Menu-Form-Item-Reason-Title">Reason</div>
+                                                        <textarea class="Menu-Form-Item-Reason-Text" placeholder="Hello there!"></textarea>
+                                                        <div class="Menu-Form-Item-Reason-Send">
+                                                            <!--<div class="Menu-Form-Item-Reason-Button">{{Actions['SEND_FORM']}}</div>/-->
+                                                            <div class="Menu-Form-Item-Reason-Letters-Limit"><span>150</span> Letters left</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="Menu-Form-Item-Error-Wrapper">
+                                                        <ul></ul>
+                                                    </div>
+                                                    <!--<button class="Display-Button-Form-Item-Result">Display Result</button>/-->
+                                                    <div class="Menu-Form-Item-Result-Wrapper">
+                                                        <div class="Menu-Form-Item-Result-Title">{{Actions['DISPLAY_RESULTS']}}</div>
+                                                        <div class="Menu-Form-Item-Result-Select">
+                                                            <select class="original_select"></select>
+                                                        </div>
+                                                        <div class="Menu-Form-Item-Result-List-Wrapper">
+                                                            <div class="Menu-Form-Item-Result-List-Data">
+                                                                <div class="Menu-Form-Item-Result-Data-Item">This is a result... It's a typical result that retriving the request data and display back to the user. This message can be styled by the programmer its self.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% elseif ActionData['Display'] == true %}
+                                                <div class="Side-Menu-Action-Item-Text Action-InActive">{{ActionData['Name']}}</div>
+                                            {% else %}
+                                                <div class="Side-Menu-Action-Item-Text Action-InActive">[HIDDEN]</div>
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                                {% if PermissionsCategoryStatus[CategoryData['url']] == true %}
+                                    {{ attribute(CategoryForm, 'Search') }}
+                                {% endif %}
+                            </section>
+                        </section>
+                    {% endfor %}
+                    {% else %}
+                        <div id="No-Permissions">{{LANG['NO_PERMISSIONS']}}.</div>
+                    {% endif %}
+                </section>
+            </div>
+        </div>

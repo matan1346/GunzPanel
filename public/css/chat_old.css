@@ -1,0 +1,222 @@
+#m_chat
+{
+	width:100%;
+	height:20px;
+
+	position: fixed;
+	bottom:0px;
+	left:0px;
+}
+
+#chat_button
+{
+	float:left;
+	width:20px;
+	height:20px;
+
+	background-image:url('../img/chat_button.png');
+	background-repeat:no-repeat;
+
+	margin-left:5px;
+}
+
+#chat_button:hover
+{
+	cursor:pointer;
+}
+
+#chat_list
+{
+	width:200px;
+
+	position:fixed;
+	bottom:22px;
+	left:28px;
+
+	background-color:#E1E1E1;
+	box-shadow:0px 0px 4px #f68243;
+
+	font-weight:bold;
+	font-family:"Arial";
+	font-size:10pt;
+
+	cursor:default;
+
+	visibility:hidden;
+}
+
+#chat_bars
+{
+	float:left;
+	height:20px;
+}
+
+.chat_div
+{
+	float:left;
+}
+
+.chat_bar
+{
+	width:200px;
+	height:20px;
+
+	background-image:url('../img/chat_bar.png');
+	background-repeat:repeat-x;
+
+	text-align:center;
+	text-shadow:-2px 1px 2px #a1a1a1;
+
+	margin-left:3px;
+}
+
+#chat_bar_text
+{
+	font-family:"Arial";
+	font-size:11pt;
+
+	position:relative;
+	top:2px;
+
+	opacity:0.8;
+
+	width:180px;
+	height:20px;
+}
+
+#chat_bar_text:hover
+{
+	text-shadow:-2px 1px 2px #f68243;
+}
+
+.chat_bar:hover
+{
+	cursor:pointer;
+}
+
+.chat_box
+{
+	cursor:default;
+
+	width:200px;
+	height:200px;
+
+	background-color:#E1E1E1;
+
+	position:relative;
+	bottom:221px;
+
+	font-family:"Arial";
+
+	box-shadow:0px 0px 4px #f68243;
+
+	visibility:hidden;
+}
+
+.chat_box_top
+{
+	width:80%;
+	height:16px;
+
+	margin-left:auto;
+	margin-right:auto;
+
+	text-align:center;
+	font-size:14px;
+
+	background-color:#222222;
+	color:#888888;
+
+	position:relative;
+	top:1px;
+}
+
+.exit_t
+{
+	float:right;
+	font-size:14px;
+
+	color:#5555FF;
+
+	position:relative;
+	left:18px;
+}
+
+.exit_t:hover
+{
+	color:#FF5555;
+	cursor:pointer;
+}
+
+.exit_t2
+{
+	font-family:"Arial";
+
+	float:right;
+	width:20px;
+
+	font-size:14px;
+
+	color:#5555FF;
+
+	position:relative;
+	top:2px;
+}
+
+.exit_t2:hover
+{
+	color:#FF5555;
+	cursor:pointer;
+}
+
+#chat_bar_open
+{
+	width:100%;
+	height:100%;
+}
+
+.chat_box_cont
+{
+	font-family:"Arial";
+	font-size:9pt;
+	
+	text-align:left;
+
+	position:relative;
+	top:2px;
+
+	width:100%;
+	height:165px;
+
+	overflow-y:scroll;
+	overflow-x:hidden;
+
+	opacity:0.8;
+}
+
+.chat_box_message
+{
+	height:20px;
+	width:100%;	
+
+	position:relative;
+	top:1px;
+	left:1px;
+}
+
+.chat_message
+{
+	float:left;
+	width:75%;
+	height:18px;
+}
+
+.chat_send
+{
+	float:right;
+	width:25%;
+	height:20px;
+
+	position:relative;
+	bottom:1px;
+}

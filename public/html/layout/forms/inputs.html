@@ -1,0 +1,31 @@
+{% macro required_input(type, name, id, class, size, maxlength, placeholder, auto, pattern) %}
+    <input type="{{ type|default('text') }}" id="{{ id|default(name) }}" name="{{ name }}" class="Required-Input {{ class }}" 
+    size="{{ size|default('25') }}" maxlength="{{ maxlength|default('25') }}" 
+    placeholder="{{ placeholder }}" autocomplete="{{ auto|default('off') }}" 
+    pattern="{{ pattern|default('.+') }}" required/>
+{% endmacro %}
+
+{% macro input(type, name, id, class, size, maxlength, placeholder, auto, pattern) %}
+    <input type="{{ type|default('text') }}" id="{{ id }}" name="{{ name }}" class="Required-Input {{ class }}"
+    size="{{ size|default('25') }}" maxlength="{{ maxlength|default('25') }}" 
+    placeholder="{{ placeholder }}" autocomplete="{{ auto|default('off') }}" 
+    pattern="{{ pattern|default('.+') }}" />
+{% endmacro %}
+
+{% macro select_options(select_name) %}
+    {% if Actions['SELECTION'][select_name]['SELECT']|length > 0 %}
+        {% for key,SelectData in Actions['SELECTION'][select_name]['SELECT'] %}
+            {% if SelectData['sub_title'] is not empty %}
+                <optgroup label="{{SelectData['sub_title']}}">
+                    {% for SubKey, SelectSubData in SelectData['sub_options'] %}
+                        <option value="{{SelectSubData['option_id']}}">{{SelectSubData['textTranslated']}}</option>
+                    {% endfor %}
+                </optgroup>
+            {% else %}
+                <option value="{{SelectData['option_id']}}">{{SelectData['textTranslated']}}</option>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <option>--</option>
+    {% endif %}
+{% endmacro %}

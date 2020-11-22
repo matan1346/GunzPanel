@@ -1,0 +1,46 @@
+#Login-Container
+{
+    margin: 50px auto;
+    
+    width: 450px;
+}
+
+#Login-Title
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 21px;/*13px;*/
+    text-shadow: -1px 1px 1px #AAA;
+    color: #348FD0;/*#111;*/
+    opacity: 0.8;
+}
+
+#Login-Form
+{
+    margin: auto;
+    
+    width: 320px;
+}
+
+#Login-Form tr
+{
+    width: 80px;
+    height: 25px;
+}
+
+#Login-Form tr td:first-child
+{
+    width: 100px;
+}
+
+#Login-Form tr:last-child td
+{
+    width: 0px !important;
+}
+
+#Login_Button
+{
+    margin: auto;
+    
+    width: inherit;
+}

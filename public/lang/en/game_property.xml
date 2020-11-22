@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<property>
+    <account>
+        <str name="AID">AID</str>
+        <str name="USER_ID">User ID</str>
+        <str name="NAME">Name</str>
+        <str name="MAIL">Mail</str>
+        <str name="AGE">Age</str>
+        <str name="GRID">Grade</str>
+    </account>
+    <character>
+        <str name="CID">CID</str>
+        <str name="NAME">Name</str>
+        <str name="LEVEL">Level</str>
+    </character>
+</property>

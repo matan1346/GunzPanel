@@ -1,0 +1,165 @@
+
+
+{% macro change_userid(id) %}
+    {% import "layout/forms/inputs.html" as inputs %}
+    
+        <div class="Menu-Form-Item-Form text-shadow">
+            <form action="#" method="POST" class="Actions-Form">
+                <table class="">
+                    <tr>
+                        <td>
+                            <select name="account-change-userid-Select" class="Auto-Complete-Live-Select" select-name="USER">
+                                {{ inputs.select_options('USER_SELECT') }}
+                            </select>
+                        </td>
+                        <td>
+                            {{ inputs.required_input(null, 'account-change-userid-Text', null, 'Auto-Complete', null, null, Actions['Account']['GLOBAL']['USER_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="account-change-userid-New-Text">{{Actions['Account']['change_userid']['NEW_USERID_TEXT']}}</label></td>
+                        <td>
+                            {{ inputs.required_input(null, 'account-change-userid-New-Text', null, null, null, null, Actions['Account']['change_userid']['NEW_USERID_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="{{Actions['SEND_FORM']}}" name="Submit_Change_UserID" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+{% endmacro %}
+
+{% macro change_password(id) %}
+    {% import "layout/forms/inputs.html" as inputs %}
+        <div class="Menu-Form-Item-Form text-shadow">
+            <form action="#" method="POST" class="Actions-Form">
+                <table class="">
+                    <tr>
+                        <td>
+                            <select name="account-change-password-Select" class="Auto-Complete-Live-Select" select-name="USER">
+                                {{ inputs.select_options('USER_SELECT') }}
+                            </select>
+                        </td>
+                        <td>
+                            {{ inputs.required_input(null, 'account-change-password-Text', null, 'Auto-Complete', null, null, Actions['Account']['GLOBAL']['USER_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="account-change-password-New-Text">{{Actions['Account']['change_password']['NEW_PASSWORD_TEXT']}}</label></td>
+                        <td>
+                            {{ inputs.required_input('password', 'account-change-password-New-Text', null, null, null, null, Actions['Account']['change_password']['NEW_PASSWORD_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="{{Actions['SEND_FORM']}}" name="Submit_Change_Password" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+{% endmacro %}
+
+
+
+{% macro change_ugradeid(id) %}
+    {% import "layout/forms/inputs.html" as inputs %}
+        <div class="Menu-Form-Item-Form text-shadow">
+            <form action="#" method="POST">
+                <table class="">
+                    <tr>
+                        <td>
+                            <select name="account-change-ugradeid-Select" class="Auto-Complete-Live-Select" select-name="USER">
+                                {{ inputs.select_options('USER_SELECT') }}
+                            </select>
+                        </td>
+                        <td>
+                            {{ inputs.required_input(null, 'account-change-ugradeid-Text', null, 'Auto-Complete',null, null, Actions['Account']['GLOBAL']['USER_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="account-change-ugradeid-New-Text">{{Actions['Account']['change_ugradeid']['NEW_UGRADEID_TEXT']}}</label></td>
+                        <td>
+                            <select name="account-change-ugradeid-New-Text">
+                            {{ inputs.select_options('GRADE_SELECT') }}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">{{Actions['GLOBAL']['DURATION']}}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="account-change-ugradeid-Duration-Select">
+                                {{ inputs.select_options('TIME_SELECT') }}
+                            </select>
+                        </td>
+                        <td>
+                            {{ inputs.input(null, 'account-change-ugradeid-Duration-Text', null, null, '10', '5', Actions['GLOBAL']['DURATION_INPUT'],null,'^[0-9]{0,5}$') }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="{{Actions['SEND_FORM']}}" name="Submit_Change_UGradeID" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+{% endmacro %}
+
+
+
+{% macro Search2() %}
+    {% import "layout/forms/inputs.html" as inputs %}
+    
+        <div class="Menu-Form-Item-Form text-shadow">
+            <form action="#" method="POST" class="Actions-Form">
+                <table class="">
+                    <tr>
+                        <td>
+                            <select name="account-search-Select" class="Auto-Complete-Live-Select" select-name="USER">
+                                {{ inputs.select_options('USER_SELECT') }}
+                            </select>
+                        </td>
+                        <td>
+                            {{ inputs.required_input(null, 'account-search-Text', null, 'Auto-Complete-Search', null, null, Actions['Account']['GLOBAL']['USER_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="{{Actions['SEND_FORM']}}" name="Submit_Search" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+{% endmacro %}
+
+{% macro Search() %}
+    {% import "layout/forms/inputs.html" as inputs %}
+
+    <div class="Side-Menu-Action-Search-Item">
+        <form action="#" method="POST" class="Actions-Form">
+            <div class="Side-Menu-Action-Search-Item-Title">Information</div>
+            <div class="Side-Menu-Action-Search-Item-Option">
+                <!--<div class="Side-Menu-Action-Search-Item-Option-Text">
+                    <label for="OptionAcc">By</label>
+                </div>/-->
+                <div class="Side-Menu-Action-Search-Item-Option-Select">
+                    <select id="OptionAcc" class="Search-Select Auto-Complete-Live-Select" select-name="USER">
+                        {{ inputs.select_options('USER_SELECT') }}
+                    </select>
+                </div>
+            </div>
+            <div class="Side-Menu-Action-Search-Item-Input">
+                <!--<input type="search" name="SearchAcc" maxlength="30" size="30" placeholder="Search.." />/-->
+                {{ inputs.required_input(null, 'SearchAcc', null, 'Auto-Complete Auto-Complete-Search',null, null, Actions['Account']['GLOBAL']['USER_INPUT']) }}
+            </div>
+            <input type="submit" style="display: none;" value="{{Actions['SEND_FORM']}}" name="Submit_Search" />
+        </form>
+    </div>
+{% endmacro %}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions_settings>
+
+    <str name="PERMISSION">הרשאה</str>
+    <str name="SELECTIONS">בחירות</str>
+    
+    <str name="SELECT_PER_FIRST">בחר קודם הרשאה</str>
+    <str name="SELECT_ADD">הוסף</str>
+    <str name="ACTIONS">פעולות</str>
+    <str name="SAVE_ACTIONS">שמור פעולות</str>
+    <str name="SAVE_SELECTIONS">שמור בחירות</str>
+
+</permissions_settings>

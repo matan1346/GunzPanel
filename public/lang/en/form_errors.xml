@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form_errors>
+
+    <regex>
+        <str name="REGEX_LIMITEDTEXT">The {{ key }} can contains only  numbers, alphabets characters and underscores.</str>
+        <str name="REGEX_NUMBER">The {{ key }} can contain only numbers.</str>
+        <str name="REGEX_EMAIL">The {{ key }} can contains only numbers, alphabets characters, underscores, dots and @. Format: myemail@example.com</str>
+        <str name="REGEX_PLAYERNAME">The {{ key }} can contains only  numbers, alphabets characters, underscores and  square brackets.</str>
+    </regex>
+    
+    <form_system_messages>
+        <str name="SYSTEM_MSG">System</str>
+        <str name="DATA_MSG">Database</str>
+        <str name="VALID_MSG">Validation</str>
+    </form_system_messages>
+    
+    
+    <str name="EMPTY">The {{ key }} is empty.</str>
+    <str name="NOT_SAME">The {{ key2 }} is not the same as {{ key1 }}.</str>
+    <str name="NOT_NUMBER">The {{ key }} is not a number.</str>
+    <str name="NOT_BETWEEN">The {{ key }} is not between  {{ min }}-{{ max }} characters.</str>
+    <str name="MIN">The {{ key }} has to be at least  {{ min }} characters.</str>
+    <str name="MAX">The {{ key }} cannot be beyond {{ max }} characters.</str>
+    <str name="EXISTS">The {{ key }} {{ keyvalue }} is already  exist.</str>
+    <str name="SEARCH_DOES_NOT_EXIST">The data that has been sent does not exist.</str>
+    <str name="SEARCH_DOES_NOT_EXIST2">The {{ key }} {{ keyvalue }} does not exist.</str>
+    
+    <str name="WRONG_INFO">Wrong login info</str>
+    <str name="NOT_FOUND">The system didn't find the {{ keys }} fields, try again later.</str>
+    <str name="INACTIVE">You do not have the permissions to use this action or the action is inactive.</str>
+    <str name="NO_ACTION_SCRIPT">The system didn't find the {{ action }} method in the {{ category }} class.</str>
+    <str name="CATEGORY_ACTION_DOES_NOT_EXIST">The category or/and action does not exist at all.</str>
+</form_errors>

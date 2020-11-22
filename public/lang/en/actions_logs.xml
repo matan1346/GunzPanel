@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionslogs>
+        
+    <account>
+        <str name="CHANGE_USERID">The account name {{ UserID1 }} has been changed to {{ UserID2 }}.</str>
+        <str name="CHANGE_PASS">The password of the account {{ UserID }} has been changed to {{ Pass }}.</str>
+        <str name="CHANGE_GRADE">The grade of the account {{ UserID }} has been changed to {{ Grade }}.{{ newline }}Duraton: {{ Time }}.</str>
+        <str name="BAN_USER">The account {{ UserID }} has been banned.{{ newline }}Duration: {{ Time }}.</str>
+        <str name="UNBAN_USER">The account {{ UserID }} has been unbanned.</str>
+    </account>
+    
+    <character>
+        <str name="CHANGE_VALUE">The {{ Value_Name }} of the character {{ Character }} has been changed to {{ Value }}.</str>
+        <str name="CHANGE_LEVEL">The level of the character {{ Character }} has been set to {{ Level }}.</str>
+        <str name="SET_COLOR">The color {{ Color }} has been set to the character {{ Character }}.{{ newline }}Duration: {{ Time }}.</str>
+    </character>
+    
+    <clan>
+    
+    </clan>
+    
+</actionslogs>

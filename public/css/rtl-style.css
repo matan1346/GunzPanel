@@ -1,0 +1,435 @@
+
+* {
+    direction: rtl;
+}
+
+#Panel-Lang-Holder
+{
+    /*
+    left: 0px;
+    right: inherit !important;
+    direction: ltr !important;
+    */
+    
+    /*
+    right: 0px !important;
+    left: inherit !important;
+    direction: rtl !important;
+    */
+    
+    left: 0px;
+    right: inherit !important;
+    direction: ltr !important;
+    
+    font-family: sans-serif !important;
+}
+
+#Panel-Lang-Holder #Panel-Lang-Button
+{
+    right: auto !important;
+    left: 0px !important;
+}
+
+#Panel-Lang-Holder #Panel-Lang-List 
+{
+    /*
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px !important;
+    */
+    
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0px !important;
+}
+
+#CreditsContainer *
+{
+    direction: ltr !important;
+}
+
+#CreditsContainer
+{
+    left: 62px !important;
+}
+/*{
+    left: auto !important;
+    margin-right: -25px;
+}
+
+#CreditsContainer #Credit
+{
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}*/
+
+#logo
+{
+    float: right !important;
+}
+
+/*
+#hello_msg
+{
+    float: left !important;
+    right: -20px !important;
+}
+*/
+
+#hello_msg
+{
+    font-family: sans-serif !important;
+    letter-spacing: 1px;
+    left: 20% !important;
+    right: 50% !important;
+}
+
+#Panel-Menu-Wrapper
+{
+    direction: ltr !important;
+    margin-right: 1px;
+}
+
+.Panel-Menu-Item
+{
+    font-family: sans-serif !important;
+    letter-spacing: 1px;
+}
+
+.Panel-Menu-Item-Sub-Menu-Title
+{
+    margin-left: auto !important;
+    margin-right: 5px;
+    text-align: right;
+    font-family: sans-serif !important;
+    letter-spacing: 1px;
+}
+
+
+#Side-Menu-Wrapper
+{
+    left: 0 !important;
+    right: 0;
+    font-family: sans-serif !important;
+}
+
+#System-Messages-Wrapper
+{
+    left: 0;
+    right: auto !important;
+    
+    box-shadow: 3px -1px 5px black !important;/*1px 0px 11px #104E64 !important;*/
+}
+
+.System-Messages-Item div
+{
+    margin-left: 15px !important;
+    margin-right: 5px !important;
+}
+
+#Side-Menu-Content
+{
+    font-family: sans-serif !important;
+}
+
+#No-Permissions
+{
+    -webkit-transform: rotate(-50deg) !important;
+    -moz-transform: rotate(-50deg) !important;
+    -ms-transform: rotate(-50deg) !important;
+    -o-transform: rotate(-50deg) !important;
+}
+
+#Side-Menu-Title
+{
+    float: right !important;
+}
+
+.Category-InActive
+{
+    text-align: right !important;
+}
+
+.Side-Menu-Action-Item-Form
+{
+    left: auto;
+    right: 15% !important;
+}
+
+.Menu-Form-Item-Result-Select
+{
+    right: auto !important;
+    left: 0px;
+}
+
+#Side-Menu-Content .Side-Menu-Action-Category .Side-Menu-Action-List
+{
+    margin-left: auto !important;
+    margin-right: 15%;
+}
+
+.Auto-Complete-Live-Wrapper
+{
+    right: auto !important;
+    left: 0px;
+}
+
+/*.Side-Menu-Action-Search-Item-Input .Auto-Complete-Live-Wrapper
+{
+    left: auto !important;
+    right: 0px !important;
+}*/
+
+.Auto-Complete-Live-Wrapper ul li
+{
+    text-align: left !important;
+}
+
+/*.Menu-Form-Item-Result-Title
+{
+    margin-right: 10px;
+}
+*/
+/*.Menu-Form-Item-Result-List-Wrapper
+{
+    right: 4%;
+}
+*/
+.Menu-Form-Item-Title span
+{
+    float: right !important;
+    border-top-left-radius: 0px 0px !important;
+    border-top-right-radius: 8px 8px !important;
+}
+
+
+/**
+    Panel Search Results
+*/
+
+.Panel-Search-Results-Item-SideMenu
+{
+    float: right !important;
+}
+
+.Panel-Search-Results-Item-Contexts
+{
+    margin-left: 0 !important;
+    margin-right: 1%;
+}
+
+.ui-dialog .ui-dialog-title
+{
+    float: right !important;
+}
+
+.ui-dialog .ui-dialog-titlebar-close
+{
+    right: auto !important;
+    left: .3em;
+}
+
+.ui-dialog .ui-dialog-titlebar-minimize
+{
+    right: auto;
+    left: 24px;
+}
+
+.ui-dialog .ui-dialog-titlebar-minimize .ui-icon
+{
+    margin-left: 0px;
+    margin-right: 1px;
+}
+
+#dialog_window_minimized_container
+{
+    left: auto;
+    right: 0px !important;
+}
+
+.dialog_window_minimized
+{
+    float: right !important
+}
+
+
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon
+{
+    position:  relative !important;
+    float: right;
+    right: .15em;
+    /* padding-left: 1px; */
+    margin-left: 8px;
+    margin-top: 0px;
+}
+
+.ui-icon-triangle-1-e
+{
+    background-position-x: -95px !important;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset
+{
+    float: left !important;
+}
+
+.Panel-Search-Results-Item-Buttons
+{
+    right: auto !important;
+    left: 0;
+}
+
+
+/**
+    Panel Roles
+*/
+
+#Panel-Roles-Menu
+{
+    font-family: sans-serif !important;
+}
+
+#Panel-Roles-Select-Grades #SelectGrades-Container
+{
+    float: left !important;
+}
+
+.ui-multiselect span.ui-icon
+{
+    float: left !important;
+}
+
+.Panel-Roles-Category-Item
+{
+    font-family: sans-serif !important;
+}
+
+/*
+.Panel-Roles-Category-Actions
+{
+    font-family: sans-serif !important;
+}
+*/
+.Panel-Roles-Category-Actions table th
+{
+    border-right: 1px solid rgb(13, 62, 79);
+    border-left: none !important;
+}
+
+.Panel-Roles-Category-Actions table th:first-child
+{
+    border-right: none;
+}
+
+.Panel-Roles-Category-Actions table td
+{
+    border-right: 1px solid rgb(13, 62, 79);
+    border-left: none !important;
+}
+
+.Panel-Roles-Category-Actions table:last-child td:last-child
+{
+    text-align: right;
+}
+
+.Panel-Roles-Category-Actions table td:first-child
+{
+    border-right: none;
+}
+
+
+.Action-Category-Approve
+{
+    background-position: left !important;    
+}
+
+.Selection-Info .SelectionItem td:first-child
+{
+    font-family: sans-serif !important;
+    float: right !important;
+}
+
+.Selection-Info .SelectionItem td:last-child
+{
+    float: left !important;
+}
+
+
+#Panel-Roles-Menu > tbody > tr > td:first-child
+{
+    border-left: 1px solid rgb(7, 122, 161);
+    border-right: none !important;
+}
+
+#Panel-Roles-Menu > tbody > tr:first-child > td:first-child
+{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 0px !important;
+}
+
+#Panel-Roles-Menu > tbody > tr:first-child > td:last-child
+{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px !important;
+}
+
+#Panel-Roles-Menu > tbody > tr:last-child > td:first-child
+{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0px !important;
+}
+
+#Panel-Roles-Menu > tbody > tr:last-child > td:last-child
+{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 0px !important;
+}
+
+#AddSelectionButton
+{
+    margin-left: 0px !important;
+    margin-right: 20px;
+    bottom: 3px !important;
+}
+
+/**
+    End of Panel Roles
+
+**/
+
+
+/**
+    Start of MultiSelect
+*/
+
+.ui-multiselect
+{
+    padding: 2px 4px 2px 0px;
+    text-align: right;
+}
+
+.ui-icon-circle-close {
+    position: absolute;
+    left: 4px;
+}
+
+.ui-multiselect-header ul li
+{
+    float: right;
+}
+
+.ui-multiselect-single .ui-multiselect-checkboxes input
+{
+    right: -9999px;
+}
+
+.ui-multiselect-menu
+{
+    text-align: right;
+}
+
+.ui-multiselect-checkboxes label input
+{
+    margin-left: 2px;
+}

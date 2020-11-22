@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lang>
+    <langspec>
+        <str name="DIRECTION">rtl</str>
+        <str name="TEXT_ALIGN">right</str>
+        <str name="FLOAT">FL_RIGHT</str>
+        <str name="FLOAT_REV">FL_LEFT</str>
+        <str name="MENU_ARROW_FLOAT">MENU_ARROW_RIGHT</str>
+        
+        <str name="LANG_MENU">בחר שפה</str>
+    </langspec>
+
+    <main>
+         <str name="PLEASE">בבקשה</str>
+         <str name="HELLO">שלום</str>
+         <str name="SIGN_IN">התחבר</str>
+         <str name="SIGN_OUT">התנתק</str>
+         <str name="LOADING">טוען...</str>
+    </main>
+    
+    <module> <!-- str name -> module name -->
+        <desc>
+            <str name="login">התחברות לפאנל גאנז</str>
+        </desc>
+        
+        <keywords>
+            <str name="login">Login, Gunz Login, Gunz Panel Login</str>
+        </keywords>
+    </module>
+    
+    <autocomplete>
+        <str name="AUTO_COMPLETE">השלמה אוטומטית...</str>
+    </autocomplete>
+    
+    <error>
+        <str name="STR_NOT_FOUND">סטרניג לא נמצא</str>
+        <str name="MISSING_FORM_FIELDS">חסרות שורות בטופס</str>
+        <str name="AUTH_FAILED">אימות נכשל</str>
+        <str name="ERROR">שגיאה</str>
+        <str name="NOT_LOGGED_IN">לא מחובר</str>
+        <str name="BAD_REQUEST">בקשה רעה</str>
+        
+        <database>
+            <str name="CONNECT">לא יכול להתחבר לטבלה</str>
+            <str name="QUERY_EXECUTION">ביצוע שאילתה נכשל</str>
+        </database>
+    </error>
+    
+</lang>

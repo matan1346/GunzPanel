@@ -1,0 +1,290 @@
+{% include 'layout/header.html' %}
+<script>
+_SELECTION_LIST = {{ SELECTION_LIST|json_encode|raw }};
+_SELECTION = "{{ ACTIONS_SETTINGS['LANG_ROLES']['SELECT_SETTINGS']['SELECTION'] }}";
+_SELECTIONS_ADD = "{{ ACTIONS_SETTINGS['LANG_ROLES']['SELECT_SETTINGS']['SELECTIONS_ADD'] }}";
+_ACTIONS = "{{ ACTIONS_SETTINGS['LANG_ROLES']['SELECT_SETTINGS']['ACTIONS'] }}";
+//SetSelectionGradeListAsHtml();
+//console.log(SELECTION_LIST_HTML);
+</script>
+<div id="Panel-Roles-Wrapper">
+    <div class="Loading-Changes"><div id="ajax_loader"></div></div>
+    <!--<button class="Old-Value-Button">SET OLD VALUE</button>/-->
+    <!--<div id="Panel-Roles-Menu">
+        
+        <div id="Panel-Roles-Menu-Data">
+            <div id="Panel-Roles-Menu-Data-Grade">
+                <span>Grade:</span> 
+                <select>
+                    <option>256</option>
+                    <option>255</option>
+                    <option>254</option>
+                    <option>252</option>
+                </select>
+            </div>
+            <div id="Panel-Roles-Menu-Data-Category">
+                <div class="Panel-Roles-Menu-Data-Category-Item">Account</div>
+                <div class="Panel-Roles-Menu-Data-Category-Item">Character</div>
+                <div class="Panel-Roles-Menu-Data-Category-Item">Clan</div>
+            </div>
+        </div>
+    </div>
+    <div id="Panel-Roles-Side-Menu">a</div>/-->
+    
+    <table id="Panel-Roles-Menu">
+        <tr>
+            <td>
+                <div id="Panel-Roles-Select-Categories" class="text-shadow">
+                    {% for CategoryID, CategoryData in ACTIONS_SETTINGS['Categories'] %}
+                        <div class="Panel-Roles-Category-Item" category-id="{{CategoryID}}">{{CategoryData['TranslatedName']}}</div>
+                    {% endfor %}
+                </div>
+            </td>
+            <td>
+                <div id="Panel-Roles-Select-Grades">
+                    <span class="text-shadow">{{ACTIONS_SETTINGS['LANG_ROLES']['PERMISSION']}}:</span> 
+                    <div id="SelectGrades-Container">
+                        <select size="5" id="SelectGrades">
+                            <option>256</option>
+                            <option>255</option>
+                            <option>254</option>
+                            <option>252</option>
+                        </select>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr id="Panel-Roles-Category-Info">
+            <td>
+                <!--<div id="Panel-Roles-Category-Title" class="Selected-Action-Category">
+                    <input type="checkbox" name="Category" value="Account" id="category1" checked="checked" />
+                    <label for="category1">
+                        Account
+                    </label>
+                </div>/-->
+                
+                {% for CategoryID, CategoryData in ACTIONS_SETTINGS['Categories'] %}
+                    <div class="Panel-Roles-Category-Actions" category-id="{{CategoryID}}">
+                        <div class="Selected-Action-Category">{{ACTIONS_SETTINGS['LANG_ROLES']['CATEGORY_NAME']}}</div>
+                        <table>
+                            <!--<tr>
+                                <th class="text-shadow">{{ACTIONS_SETTINGS['LANG_ROLES']['INPUT_DISPLAY']}}</th>
+                                <th class="text-shadow">{{ACTIONS_SETTINGS['LANG_ROLES']['INPUT_ACTIVE']}}</th>
+                                <th class="text-shadow">{{ACTIONS_SETTINGS['LANG_ROLES']['CATEGORY_NAME']}}</th>
+                            </tr>/-->
+                            <tr>
+                                <!--<td><input type="checkbox" class="checkbox_display checkbox_regular" name="display_category" value="Account" /></td>
+                                <td><input type="checkbox" class="checkbox_active checkbox_regular" name="active_category" value="Account" /></td>/-->
+                                <td class="Action-Category-Display Action-Category-Active Action-Category-Approve text-shadow">{{CategoryData['TranslatedName']}}</td>
+                            </tr>
+                        </table>
+                        <br />
+                        <div class="Selected-Action-Category">{{ACTIONS_SETTINGS['LANG_ROLES']['ACTIONS_ROLES']}}</div>
+                        <table>
+                                <tr>
+                                    <th class="text-shadow">{{ACTIONS_SETTINGS['LANG_ROLES']['INPUT_EXISTS']}}</th>
+                                    <th class="text-shadow">{{ACTIONS_SETTINGS['LANG_ROLES']['INPUT_DISPLAY']}}</th>
+                                    <th class="text-shadow">{{ACTIONS_SETTINGS['LANG_ROLES']['INPUT_ACTIVE']}}</th>
+                                    <th class="text-shadow">{{ACTIONS_SETTINGS['LANG_ROLES']['ACTION_NAME']}}</th>
+                                </tr>
+                                <tr class="Actions-All">
+                                    <td><input type="checkbox" class="checkbox_exists checkbox_exists_all checkbox_super" name="exists_actions" value="action1" /></td>
+                                    <td><input type="checkbox" class="checkbox_display checkbox_display_all checkbox_super" name="display_actions" value="action1" /></td>
+                                    <td><input type="checkbox" class="checkbox_active checkbox_active_all checkbox_super" name="active_category" value="action2"  /></td>
+                                    <td>{{ACTIONS_SETTINGS['LANG_ROLES']['ALL_ACTIONS']}}</td>
+                                </tr>
+                            
+                                {% for ActionKey, ActionData in CategoryData['sub_menu'] %}
+                                    <tr class="Action-Item" action-id="{{ActionData['PAID']}}">
+                                        <td><input type="checkbox" class="checkbox_exists checkbox_action_exists checkbox_regular" name="exists_actions" value="action1" /></td>
+                                        <td><input type="checkbox" class="checkbox_display checkbox_action_display checkbox_regular" name="display_actions" value="action1" /></td>
+                                        <td><input type="checkbox" class="checkbox_active checkbox_action_active checkbox_regular" name="active_category" value="action2"  /></td>
+                                        <td>{{ActionData['TranslatedName']}}</td>
+                                    </tr>    
+                                {% endfor %}
+                                
+                           
+                        </table>
+                    </div>
+                {% endfor %}
+                
+            </td>
+            <td id="Selection-Wrapper">
+                <div class="Selected-Action-Category" id="Selected-Permission-Title">{{LANG.SELECT_SETTINGS.NONE_SELECTED}} - <span><span id="PermissionGrade">256</span> {{ACTIONS_SETTINGS['LANG_ROLES']['PERMISSION']}}</span></div>
+                <!--{% import "layout/forms/inputs.html" as inputs %}
+                
+                /-->
+                <div id="Selection-Container">
+               
+                    <div class="Selection-Action">
+                        <div id="SelectionList-Container">
+                            <!--<table id="Selection-List">
+                                <tr>
+                                    <td>Selection</td>
+                                    <td></td>
+                                </tr>
+                            </table>/-->
+                            <div>{{ACTIONS_SETTINGS['LANG_ROLES']['SELECTIONS']}}
+                                <div id="Selection-List"></div>
+                            </div>
+                        </div>
+                        <table class="Selection-Info"></table>
+                    </div>
+                </div>
+                
+                
+                <!--<div class="Selection-Action" action-id="1">
+                    <table class="Selection-Info">
+                        <tr class="SelectionItem">
+                            <td>
+                                <label>Grades</label>
+                            </td>
+                            <td>
+                                <select title="Basic example" multiple="multiple" name="" size="5" class="multi_select">
+                                    <option>Normal</option>
+                                    <option>Game Master</option>
+                                    <option>Admin</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="SelectionItem">
+                            <td>
+                                <label>User select</label>
+                            </td>
+                            <td>
+                                <select title="Basic example" multiple="multiple" name="" size="5" class="multi_select">
+                                    <option>Normal</option>
+                                    <option>Game Master</option>
+                                    <option>Admin</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="Selection-Action"  action-id="2">
+                    <table class="Selection-Info">
+                        <tr class="SelectionItem">
+                            <td>
+                                <label>Grades</label>
+                            </td>
+                            <td>
+                                <select title="Basic example" multiple="multiple" name="" size="5" class="multi_select">
+                                    <option>Normal</option>
+                                    <option>Game Master</option>
+                                    <option>Admin</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="SelectionItem">
+                            <td>
+                                <label>User select</label>
+                            </td>
+                            <td>
+                                <select title="Basic example" multiple="multiple" name="" size="5" class="multi_select">
+                                    <option>Normal</option>
+                                    <option>Game Master</option>
+                                    <option>Admin</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="Selection-Action" action-id="3">
+                    <table class="Selection-Info">
+                        <tr class="SelectionItem">
+                            <td>
+                                <label>Grades</label>
+                            </td>
+                            <td>
+                                <select title="Basic example" multiple="multiple" name="" size="5" class="multi_select">
+                                    <option>Normal</option>
+                                    <option>Game Master</option>
+                                    <option>Admin</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="SelectionItem">
+                            <td>
+                                <label>User select</label>
+                            </td>
+                            <td>
+                                <select title="Basic example" multiple="multiple" name="" size="5" class="multi_select">
+                                    <option>Normal</option>
+                                    <option>Game Master</option>
+                                    <option>Admin</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="Selection-Action" action-id="4">
+                    <table class="Selection-Info">
+                        <tr class="SelectionItem">
+                            <td>
+                                <label>Grades</label>
+                            </td>
+                            <td>
+                                <select title="Basic example" multiple="multiple" name="" size="5" class="multi_select">
+                                    <option>Normal</option>
+                                    <option>Game Master</option>
+                                    <option>Admin</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="SelectionItem">
+                            <td>
+                                <label>User select</label>
+                            </td>
+                            <td>
+                                <select title="Basic example" multiple="multiple" name="" size="5" class="multi_select">
+                                    <option>Normal</option>
+                                    <option>Game Master</option>
+                                    <option>Admin</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="Selection-Action" action-id="5">
+                    <table class="Selection-Info">
+                        <tr class="SelectionItem">
+                            <td>
+                                <label>Grades</label>
+                            </td>
+                            <td>
+                                <select title="Basic example" multiple="multiple" name="" size="5" class="multi_select">
+                                    <option>Normal</option>
+                                    <option>Game Master</option>
+                                    <option>Admin</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="SelectionItem">
+                            <td>
+                                <label>User select</label>
+                            </td>
+                            <td>
+                                <select title="Basic example" multiple="multiple" name="" size="5" class="multi_select">
+                                    <option>Normal</option>
+                                    <option>Game Master</option>
+                                    <option>Admin</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>/-->
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" id="SaveActionsTitle"><span>{{ ACTIONS_SETTINGS['LANG_ROLES']['SELECT_SETTINGS']['SELECT_FIRST'] }}</span></td>
+        </tr>
+        <tr>
+            <td id="SaveActionsButton">{{ ACTIONS_SETTINGS['LANG_ROLES']['SELECT_SETTINGS']['SAVE_ACTIONS'] }}</td>
+            <td id="SaveSelectionsButton">{{ ACTIONS_SETTINGS['LANG_ROLES']['SELECT_SETTINGS']['SAVE_SELECTIONS'] }}</td>
+            <!--<td colspan="2" id="SaveActions"><button id="SaveActionsButton">Save</button><span>Select Grade First</span></td>/-->
+        </tr>
+        
+    </table>
+    <div id="AddSpace"></div>
+</div>
+{% include 'layout/footer.html' %}

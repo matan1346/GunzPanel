@@ -1,0 +1,43 @@
+
+
+        <!--<div id="Side-Menu-Wrapper">
+            <div id="Side-Menu-Title">Actions Menu</div>
+            <div id="Side-Menu-Button">Open</div>
+            <div id="Side-Menu-Content-Wrapper">
+                <section id="Side-Menu-Content">
+                    {% if PermissionsAccess == true %}
+                    {% for CategoryName, CategoryData in Permissions %}
+                        {% import "layout/forms/actions/" ~ CategoryName|lower|replace({' ': '-'}) ~ "-forms.html" as CategoryForm %}
+                        <section class="Side-Menu-Action-Category">
+                            {% if PermissionsCategoryStatus[CategoryName] != null and PermissionsCategoryStatus[CategoryName] == true %}
+                                <div class="Side-Menu-Action-Category-Text">{{CategoryName}}</div>
+                            {% else %}
+                                <div class="Side-Menu-Action-Category-Text Category-InActive">{{CategoryName}}</div>
+                            {% endif %}
+                            <section class="Side-Menu-Action-List">
+                                {% if CategoryData['Actions'] != null %}
+                                    {% for ActionIndex, ActionData in CategoryData['Actions'] %}
+                                        <div class="Side-Menu-Action-Item">
+                                            {% if ActionData['Active'] == true %}
+                                                <div class="Side-Menu-Action-Item-Text">{{ActionData['Name']}}</div>
+                                                <div class="Side-Menu-Action-Item-Form">
+                                                    {{ attribute(CategoryForm, (ActionData['Name']|replace({' ': '_'}))) }}
+                                                </div>
+                                            {% else %}
+                                                <div class="Side-Menu-Action-Item-Text Action-InActive">{{ActionData['Name']}}</div>
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                                {% if PermissionsCategoryStatus[CategoryName] == true %}
+                                    {{ attribute(CategoryForm, 'Search') }}
+                                {% endif %}
+                            </section>
+                        </section>
+                    {% endfor %}
+                    {% else %}
+                        <span style="font-size: 10pt;color: whitesmoke;">No Permissions at all.</span>
+                    {% endif %}
+                </section>
+            </div>
+        </div>/-->

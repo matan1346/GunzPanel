@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<select_options>
+  <selection_settings>
+    <str name="CHECK_ALL_TEXT">Check all</str>
+    <str name="UNCHECK_ALL_TEXT">UnCheck all</str>
+    <str name="NONE_SELECTED_TEXT">Select options</str>
+    <str name="SELECTED_TEXT"># selected</str>
+  </selection_settings>
+  <selections_name>
+    <str name="SELECT">Select</str>
+    <str name="USER_SELECT">User</str>
+    <str name="CHAR_SELECT">Character</str>
+    <str name="CLAN_SELECT">Clan</str>
+    <str name="GRADE_SELECT">Grade</str>
+    <str name="TIME_SELECT">Time</str>
+    <str name="SCORE_ACTION_SELECT">Score Action</str>
+    <str name="SCORE_OPTION_SELECT">Score Option</str>
+    <str name="CLAN_ROLE_SELECT">Clan Role</str>
+    <str name="USER_SEARCH_FIELDS">Search Fields</str>
+  </selections_name>
+  <groups>
+    <str name="GROUP_STAFF">Staff</str>
+    <str name="GROUP_FTRES">Features</str>
+    <str name="GROUP_PNISH">Punsihments</str>
+    <str name="GROUP_TIME">Time</str>
+    <str name="GROUP_OTHER">Other</str>
+    <str name="GROUP_ROLES">Roles</str>
+  </groups>
+  <options>
+    <str name="USER_ID">UserID</str>
+    <str name="USER_AID">AID</str>
+    <str name="CHARACTER_NAME">Character Name</str>
+    <str name="CHARACTER_CID">CID</str>
+    <str name="NORMAL">Normal</str>
+    <str name="POLICE">Police</str>
+    <str name="GM">GameMaster</str>
+    <str name="ADMIN">Adminsitrator</str>
+    <str name="JJANG">JJang</str>
+    <str name="VIP">VIP</str>
+    <str name="CUSTOM_VIP">Custom VIP</str>
+    <str name="CHAT_BAN">Chat-ban</str>
+    <str name="BAN">Ban</str>
+    <str name="UNLIMITED">Unlimited</str>
+    <str name="SECS">Seconds</str>
+    <str name="MINS">Minutes</str>
+    <str name="HOURS">Hours</str>
+    <str name="DAYS">Days</str>
+    <str name="MONTHS">Months</str>
+    <str name="YEARS">Years</str>
+    <str name="CLAN_NAME">Clan Name</str>
+    <str name="CLAN_CLID">CLID</str>
+    <str name="ACTION_SET">Set</str>
+    <str name="ACTION_ADD">Add</str>
+    <str name="ACTION_REDUCE">Reduce</str>
+    <str name="OPTION_POINTS">Points</str>
+    <str name="OPTION_WINS">Wins</str>
+    <str name="OPTION_LOSES">Loses</str>
+    <str name="CLAN_ROLE_KICK">Kick</str>
+    <str name="CLAN_ROLE_MEMBER">Member</str>
+    <str name="CLAN_ROLE_ADMIN">Admin</str>
+    <str name="CLAN_ROLE_LEADER">Leader</str>
+    <str name="USER_PASSWORD">Password</str>
+    <str name="USER_NAME">Name</str>
+    <str name="USER_GRADE">Grade</str>
+    <str name="USER_AGE">Age</str>
+    <str name="USER_EMAIL">Email</str>
+    <str name="USER_COINS">Coins</str>
+    <str name="USER_LAST_IP">IP Address</str>
+    <str name="USER_MAC">Mac Address</str>
+    <str name="USER_REG_DATE">Register Date</str>
+    <str name="USER_LAST_CON_DATE">Last Connection</str>
+  </options>
+</select_options>

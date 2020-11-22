@@ -1,0 +1,88 @@
+#block_container
+{
+	margin:100px auto;
+
+	width:1038px;
+	height:790px;
+
+	overflow: hidden;
+}
+
+#m_panel
+{
+	position: relative;
+}
+
+#sidemenus
+{
+	float: left;
+	width: 150px;
+	height: 624px;
+}
+
+#top_panel
+{
+	width: 888px;
+	height: 77px;
+
+	position: relative;
+	left: 150px;
+}
+
+#logo
+{
+	width:346px;
+	height:77px;
+
+	background-image:url('../img/Logo.png');
+	background-repeat:no-repeat;
+
+	float: left;
+}
+
+#hello_msg
+{
+	height: 13px;
+	float:right;
+
+	position:relative;
+	top: 64px;
+
+
+	font-weight:bold;
+	font-family:"Arial";
+	font-size:13px;
+
+	padding-right: 10px;
+
+	color:#FAFAFA;
+}
+
+#top_username
+{
+	color:#ff5a00;
+}
+
+#logout
+{
+	color:#FAFAFA;
+}
+
+#logout:hover
+{
+	cursor:pointer;
+	color:#f68243;
+	text-shadow:0px 0px 2px #f68243;
+}
+
+#panel
+{
+	width:888px;
+	height:547px;
+
+	background-image:url('../img/panel_background.png');
+	background-repeat:no-repeat;
+
+	position: relative;
+	left: 150px;
+}

@@ -1,0 +1,133 @@
+
+
+{% macro change_name(id) %}
+    {% import "layout/forms/inputs.html" as inputs %}
+        <div class="Menu-Form-Item-Form text-shadow">
+            <form action="#" method="POST">
+                <table class="">
+                    <tr>
+                        <td>
+                            <select name="clan-change-name-Select" class="Auto-Complete-Live-Select" select-name="CLAN">
+                                {{ inputs.select_options('CLAN_SELECT') }}
+                            </select>
+                        </td>
+                        <td>
+                            {{ inputs.required_input(null, 'clan-change-name-Text', null, 'Auto-Complete', null, null, Actions['Clan']['GLOBAL']['CLAN_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="clan-change-name-New-Text">{{Actions['Clan']['change_name']['NEW_CLAN_NAME_TEXT']}}</label></td>
+                        <td>
+                            {{ inputs.required_input(null, 'clan-change-name-New-Text', null, null, null, null, Actions['Clan']['change_name']['NEW_CLAN_NAME_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="{{Actions['SEND_FORM']}}" name="Submit_Change_Name" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+{% endmacro %}
+
+
+{% macro change_score(id) %}
+    {% import "layout/forms/inputs.html" as inputs %}
+        <div class="Menu-Form-Item-Form text-shadow">
+            <form action="#" method="POST">
+                <table class="">
+                    <tr>
+                        <td>
+                            <select name="clan-change-score-Select" class="Auto-Complete-Live-Select" select-name="CLAN">
+                                {{ inputs.select_options('CLAN_SELECT') }}
+                            </select>
+                        </td>
+                        <td>
+                            {{ inputs.required_input(null, 'clan-change-score-Text', null, 'Auto-Complete', null, null, Actions['Clan']['GLOBAL']['CLAN_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="clan-change-score-Action-Select">
+                                {{ inputs.select_options('SCORE_ACTION_SELECT') }}
+                            </select>
+                        </td>
+                        <td>
+                            <select name="clan-change-score-Field-Select">
+                                {{ inputs.select_options('SCORE_OPTION_SELECT') }}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            {{ inputs.required_input(null, 'clan-change-score-Field-Text', null, null, null, null, Actions['Clan']['change_score']['NEW_SCORE_INPUT'], null,'^[0-9]+$') }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="{{Actions['SEND_FORM']}}" name="Submit_Change_Score" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+{% endmacro %}
+
+
+{% macro change_role(id) %}
+    {% import "layout/forms/inputs.html" as inputs %}
+        <div class="Menu-Form-Item-Form text-shadow">
+            <form action="#" method="POST">
+                <table class="">
+                    <tr>
+                        <td>
+                            <select name="clan-change-role-Select" class="Auto-Complete-Live-Select" select-name="CLAN">
+                                {{ inputs.select_options('CLAN_SELECT') }}
+                            </select>
+                        </td>
+                        <td>
+                            {{ inputs.required_input(null, 'clan-change-role-Text', null, 'Auto-Complete', null, null, Actions['Clan']['GLOBAL']['CLAN_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="clan-change-role-New-Text">{{Actions['Clan']['change_role']['NEW_ROLE_TEXT']}}</label></td>
+                        <td>
+                            <select name="clan-change-role-New-Text">
+                                {{ inputs.select_options('CLAN_ROLE_SELECT') }}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="{{Actions['SEND_FORM']}}" name="Submit_Change_Role" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+{% endmacro %}
+
+{% macro Search() %}
+    {% import "layout/forms/inputs.html" as inputs %}
+
+    <div class="Side-Menu-Action-Search-Item">
+        <form action="#" method="POST" class="Actions-Form">
+            <div class="Side-Menu-Action-Search-Item-Title">Information By</div>
+            <div class="Side-Menu-Action-Search-Item-Option">
+                <!--<div class="Side-Menu-Action-Search-Item-Option-Text">
+                    <label for="OptionClan">By</label>
+                </div>/-->
+                <div class="Side-Menu-Action-Search-Item-Option-Select">
+                    <select id="OptionClan" class="Search-Select Auto-Complete-Live-Select" select-name="CLAN">
+                        {{ inputs.select_options('CLAN_SELECT') }}
+                    </select>
+                </div>
+            </div>
+            <div class="Side-Menu-Action-Search-Item-Input">
+                {{ inputs.required_input(null, 'SearchClan', null, 'Auto-Complete Auto-Complete-Search',null, null, Actions['Clan']['GLOBAL']['CLAN_INPUT']) }}
+            </div>
+            <input type="submit" style="display: none;" value="{{Actions['SEND_FORM']}}" name="Submit_Search" />
+        </form>
+    </div>
+{% endmacro %}

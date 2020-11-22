@@ -1,0 +1,57 @@
+
+
+{% macro change_nickname(id) %}
+    {% import "layout/forms/inputs.html" as inputs %}
+        <div class="Menu-Form-Item-Form text-shadow">
+            <form action="#" method="POST">
+                <table class="">
+                    <tr>
+                        <td>
+                            <select name="character-change-nickname-Select" class="Auto-Complete-Live-Select" select-name="CHAR">
+                                {{ inputs.select_options('CHAR_SELECT') }}
+                            </select>
+                        </td>
+                        <td>
+                            {{ inputs.required_input(null, 'character-change-nickname-Text', null, 'Auto-Complete', null, null, Actions['Character']['GLOBAL']['CHARACTER_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="character-change-nickname-New-Text">{{Actions['Character']['change_nickname']['NEW_NICKNAME_TEXT']}}</label></td>
+                        <td>
+                            {{ inputs.required_input(null, 'character-change-nickname-New-Text', null, null, null, null, Actions['Character']['change_nickname']['NEW_NICKNAME_INPUT']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="{{Actions['SEND_FORM']}}" name="Submit_Change_Nickname" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+{% endmacro %}
+
+
+{% macro Search() %}
+    {% import "layout/forms/inputs.html" as inputs %}
+
+    <div class="Side-Menu-Action-Search-Item">
+        <form action="#" method="POST" class="Actions-Form">
+            <div class="Side-Menu-Action-Search-Item-Title">Information</div>
+            <div class="Side-Menu-Action-Search-Item-Option">
+                <!--<div class="Side-Menu-Action-Search-Item-Option-Text">
+                    <label for="OptionCharacter">By</label>
+                </div>/-->
+                <div class="Side-Menu-Action-Search-Item-Option-Select">
+                    <select id="OptionCharacter" class="Search-Select Auto-Complete-Live-Select" select-name="CHAR">
+                        {{ inputs.select_options('CHAR_SELECT') }}
+                    </select>
+                </div>
+            </div>
+            <div class="Side-Menu-Action-Search-Item-Input">
+            {{ inputs.required_input(null, 'SearchChar', null, 'Auto-Complete Auto-Complete-Search',null, null, Actions['Character']['GLOBAL']['CHARACTER_INPUT']) }}
+            </div>
+            <input type="submit" style="display: none;" value="{{Actions['SEND_FORM']}}" name="Submit_Search" />
+        </form>
+    </div>
+{% endmacro %}
