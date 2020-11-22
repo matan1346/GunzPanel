@@ -7,16 +7,16 @@
 ## Change Permissions
 ![Image](./NewPanel3.jpg)
 ## Login
-![Image](./NewPanel.jpg)
+![Image](./NewPanel4.jpg)
 ## Login
-![Image](./NewPanel.jpg)
+![Image](./NewPanel5.jpg)
 ## Login
-![Image](./NewPanel.jpg)
+![Image](./NewPanel6.jpg)
 ## Login
-![Image](./NewPanel.jpg)
+![Image](./NewPanel7.jpg)
 ## Login
-![Image](./NewPanel.jpg)
+![Image](./NewPanel8.jpg)
 ## Login
-![Image](./NewPanel.jpg)
+![Image](./NewPanel9.jpg)
 ## Login
-![Image](./NewPanel.jpg)
+![Image](./NewPanel10.jpg)
