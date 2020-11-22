@@ -10,9 +10,9 @@
 ![Image](./NewPanel4.jpg)
 ## Set Administrator Permissoons - Actions available
 ![Image](./NewPanel5.jpg)
-## Login
+## Additional Permissions Settings
 ![Image](./NewPanel6.jpg)
-## Login
+## Set System View Translate
 ![Image](./NewPanel7.jpg)
 ## Login
 ![Image](./NewPanel8.jpg)
